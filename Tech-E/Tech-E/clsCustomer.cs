@@ -14,6 +14,9 @@ namespace Tech_E
 
 
             Console.WriteLine("i am tapiwa");
+
+
+            Console.WriteLine("i am jay");
         }
 
     }
