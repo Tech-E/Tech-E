@@ -10,6 +10,7 @@ namespace Tech_E
         public void main()
         {
             Console.WriteLine("i am shiran lin");
+
         }
 
     }
