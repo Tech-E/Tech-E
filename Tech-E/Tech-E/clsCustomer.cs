@@ -11,6 +11,9 @@ namespace Tech_E
         {
             Console.WriteLine("i am shiran lin");
 
+
+
+            Console.WriteLine("i am tapiwa");
         }
 
     }
