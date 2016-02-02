@@ -7,5 +7,10 @@ namespace Tech_E
 {
     public class clsCustomer
     {
+        public void main()
+        {
+            Console.WriteLine("i am shiran lin");
+        }
+
     }
 }
