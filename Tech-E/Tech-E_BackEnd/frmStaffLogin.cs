@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Tech_E_BackEnd
 {
-    public partial class frmCustomer : Form
+    public partial class frmStaffLogin : Form
     {
-        public frmCustomer()
+        public frmStaffLogin()
         {
             InitializeComponent();
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
