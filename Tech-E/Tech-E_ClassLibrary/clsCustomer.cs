@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Tech_E_ClassLibrary
 {
+
     public class clsCustomer
     {
     }
