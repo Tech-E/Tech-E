@@ -39,7 +39,7 @@
             this.lblStaffID.Size = new System.Drawing.Size(43, 13);
             this.lblStaffID.TabIndex = 0;
             this.lblStaffID.Text = "StaffID:";
-            this.lblStaffID.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // PaymentLookUp
             // 
