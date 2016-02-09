@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech-E_ClassLibrary", "Tech
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech-E_BackEnd", "Tech-E_BackEnd\Tech-E_BackEnd.csproj", "{86EDE59E-A26D-4824-B702-00E84F58545F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech-E_UnitTestProject", "Tech-E_UnitTestProject\Tech-E_UnitTestProject.csproj", "{C8A65293-AD2E-4C00-AF99-D540075E6F71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,16 @@ Global
 		{86EDE59E-A26D-4824-B702-00E84F58545F}.Release|ARM.ActiveCfg = Release|Any CPU
 		{86EDE59E-A26D-4824-B702-00E84F58545F}.Release|x64.ActiveCfg = Release|Any CPU
 		{86EDE59E-A26D-4824-B702-00E84F58545F}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Release|x64.ActiveCfg = Release|Any CPU
+		{C8A65293-AD2E-4C00-AF99-D540075E6F71}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
