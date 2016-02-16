@@ -58,6 +58,24 @@
     <Compile Include="StaffLogin.Designer.cs">
       <DependentUpon>StaffLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="staff_productlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_productlist.Designer.cs">
+      <DependentUpon>staff_productlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff_product_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_product_add.Designer.cs">
+      <DependentUpon>staff_product_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff_product_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_product_edit.Designer.cs">
+      <DependentUpon>staff_product_edit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PaymentLookUp.resx">
       <DependentUpon>PaymentLookUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +90,15 @@
     </Compile>
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_productlist.resx">
+      <DependentUpon>staff_productlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_product_add.resx">
+      <DependentUpon>staff_product_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_product_edit.resx">
+      <DependentUpon>staff_product_edit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
