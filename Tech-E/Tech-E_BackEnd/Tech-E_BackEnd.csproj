@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin_staffadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_staffadd.Designer.cs">
+      <DependentUpon>admin_staffadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_staffviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_staffviews.Designer.cs">
+      <DependentUpon>admin_staffviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentLookUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,12 @@
     <Compile Include="staff_product_edit.Designer.cs">
       <DependentUpon>staff_product_edit.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admin_staffadd.resx">
+      <DependentUpon>admin_staffadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_staffviews.resx">
+      <DependentUpon>admin_staffviews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaymentLookUp.resx">
       <DependentUpon>PaymentLookUp.cs</DependentUpon>
     </EmbeddedResource>

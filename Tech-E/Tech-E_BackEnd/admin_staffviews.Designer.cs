@@ -40,7 +40,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(773, 124);
+            this.button1.Location = new System.Drawing.Point(737, 118);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 27;
@@ -98,7 +98,7 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "View Staff Information";
             // 
-            // amin_staffviews
+            // admin_staffviews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
-            this.Name = "amin_staffviews";
+            this.Name = "admin_staffviews";
             this.Text = "amin_staffviews";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

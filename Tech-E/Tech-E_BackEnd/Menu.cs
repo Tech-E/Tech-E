@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Tech_E_BackEnd
 {
-    public partial class StaffLogin : Form
+    public partial class Menu : Form
     {
-        public StaffLogin()
+        public Menu()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Redirect("Menu.cs");
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
