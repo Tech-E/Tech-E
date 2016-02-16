@@ -16,5 +16,10 @@ namespace Tech_E_BackEnd
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Redirect("Menu.cs");
+        }
     }
 }
