@@ -58,6 +58,12 @@
     <Compile Include="StaffLogin.Designer.cs">
       <DependentUpon>StaffLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="staff_paymentlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_paymentlist.Designer.cs">
+      <DependentUpon>staff_paymentlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="staff_productlist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_paymentlist.resx">
+      <DependentUpon>staff_paymentlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="staff_productlist.resx">
       <DependentUpon>staff_productlist.cs</DependentUpon>
