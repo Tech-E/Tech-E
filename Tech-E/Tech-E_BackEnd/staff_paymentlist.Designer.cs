@@ -35,6 +35,7 @@
             this.btnDeletePayment = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPaymentSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -86,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(981, 151);
+            this.label2.Location = new System.Drawing.Point(981, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 16;
@@ -94,16 +95,26 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(984, 183);
+            this.textBox1.Location = new System.Drawing.Point(984, 304);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 17;
+            // 
+            // btnPaymentSearch
+            // 
+            this.btnPaymentSearch.Location = new System.Drawing.Point(1120, 304);
+            this.btnPaymentSearch.Name = "btnPaymentSearch";
+            this.btnPaymentSearch.Size = new System.Drawing.Size(110, 20);
+            this.btnPaymentSearch.TabIndex = 18;
+            this.btnPaymentSearch.Text = "Search";
+            this.btnPaymentSearch.UseVisualStyleBackColor = true;
             // 
             // staff_paymentlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 637);
+            this.Controls.Add(this.btnPaymentSearch);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDeletePayment);
@@ -127,5 +138,6 @@
         private System.Windows.Forms.Button btnDeletePayment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPaymentSearch;
     }
 }
