@@ -203,6 +203,7 @@
             this.Add.TabIndex = 37;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // admin_staffadd
             // 
