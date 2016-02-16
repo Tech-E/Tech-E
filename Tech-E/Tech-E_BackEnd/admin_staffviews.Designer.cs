@@ -1,6 +1,6 @@
 ﻿namespace Tech_E_BackEnd
 {
-    partial class amin_staffviews
+    partial class admin_staffviews
     {
         /// <summary>
         /// Required designer variable.

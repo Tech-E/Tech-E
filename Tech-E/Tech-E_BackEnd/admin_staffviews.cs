@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tech_E_BackEnd
 {
-    public partial class amin_staffviews : Form
+    public partial class admin_staffviews : Form
     {
-        public amin_staffviews()
+        public admin_staffviews()
         {
             InitializeComponent();
         }
