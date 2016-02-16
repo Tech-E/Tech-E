@@ -61,5 +61,33 @@ namespace Tech_E_UnitTestProject
         }
         // Finish Lead Programmer 09/02/2016
 
+        [TestMethod]
+        public void Password()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string APassword = "Peter";
+            //assign the data to the property
+            ACustomer.Password = APassword;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.Password, APassword);
+
+        }
+
+        [TestMethod]
+        public void PhoneNo()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            int PhoneNumber = 1;
+            //assign the data to the property
+            ACustomer.PhoneNo = PhoneNumber;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.PhoneNo, PhoneNumber);
+
+        }
+
     }
 }

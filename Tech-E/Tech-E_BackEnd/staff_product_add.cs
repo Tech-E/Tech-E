@@ -26,5 +26,10 @@ namespace Tech_E_BackEnd
         {
 
         }
+
+        private void staff_product_add_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

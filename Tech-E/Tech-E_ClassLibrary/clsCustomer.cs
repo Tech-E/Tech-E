@@ -13,5 +13,9 @@ namespace Tech_E_ClassLibrary
         public object FirstName { get; set; }
 
         public object LastName { get; set; }
+
+        public string Password { get; set; }
+
+        public int PhoneNo { get; set; }
     }
 }
