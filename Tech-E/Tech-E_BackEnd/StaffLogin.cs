@@ -19,7 +19,9 @@ namespace Tech_E_BackEnd
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Redirect("Menu.cs");
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
