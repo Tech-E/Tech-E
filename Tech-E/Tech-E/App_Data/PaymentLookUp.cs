@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Tech_E_BackEnd
 {
-    public partial class CustomerList : Form
+    public partial class PaymentLookUp : Form
     {
-        public CustomerList()
+        public PaymentLookUp()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

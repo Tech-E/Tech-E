@@ -44,11 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin_distributestaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_distributestaff.Designer.cs">
+      <DependentUpon>admin_distributestaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin_staffadd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="admin_staffadd.Designer.cs">
       <DependentUpon>admin_staffadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_staffupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_staffupdate.Designer.cs">
+      <DependentUpon>admin_staffupdate.cs</DependentUpon>
     </Compile>
     <Compile Include="admin_staffviews.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <Compile Include="staff_product_edit.Designer.cs">
       <DependentUpon>staff_product_edit.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admin_distributestaff.resx">
+      <DependentUpon>admin_distributestaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin_staffadd.resx">
       <DependentUpon>admin_staffadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_staffupdate.resx">
+      <DependentUpon>admin_staffupdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_staffviews.resx">
       <DependentUpon>admin_staffviews.cs</DependentUpon>
