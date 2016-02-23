@@ -112,6 +112,9 @@
     <EmbeddedResource Include="admin_staffviews.resx">
       <DependentUpon>admin_staffviews.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerList.resx">
+      <DependentUpon>CustomerList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
