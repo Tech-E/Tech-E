@@ -131,5 +131,34 @@ namespace Tech_E_UnitTestProject
 
         }
 
+        [TestMethod]
+        public void CustPostCode()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string APostcode = "1 Fake Lane";
+            //assign the data to the property
+            ACustomer.Postcode = APostcode;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.Postcode, APostcode);
+
+        }
+
+
+        [TestMethod]
+        public void CustTown/City()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string AAddressLine1 = "1 Fake Lane";
+            //assign the data to the property
+            ACustomer.AddressLine1 = AAddressLine1;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.AddressLine1, AAddressLine1);
+
+        }
+
     }
 }
