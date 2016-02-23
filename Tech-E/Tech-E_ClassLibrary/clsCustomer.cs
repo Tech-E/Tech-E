@@ -25,5 +25,7 @@ namespace Tech_E_ClassLibrary
         public string AddressLine2 { get; set; }
 
         public object Postcode { get; set; }
+
+        public object Town { get; set; }
     }
 }

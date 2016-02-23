@@ -123,7 +123,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            string AAddressLine2 = "1 Fake Lane";
+            string AAddressLine2 = "Thamesmead";
             //assign the data to the property
             ACustomer.AddressLine2 = AAddressLine2;
             //test to see that the two values are the same
@@ -137,7 +137,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            string APostcode = "1 Fake Lane";
+            string APostcode = "SE28 8EU";
             //assign the data to the property
             ACustomer.Postcode = APostcode;
             //test to see that the two values are the same
@@ -147,16 +147,16 @@ namespace Tech_E_UnitTestProject
 
 
         [TestMethod]
-        public void CustTownCity()
+        public void CustTown ()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            string AAddressLine1 = "1 Fake Lane";
+            string ATown = "London";
             //assign the data to the property
-            ACustomer.AddressLine1 = AAddressLine1;
+            ACustomer.Town = ATown;
             //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.AddressLine1, AAddressLine1);
+            Assert.AreEqual(ACustomer.Town, ATown);
 
         }
 
