@@ -147,7 +147,7 @@ namespace Tech_E_UnitTestProject
 
 
         [TestMethod]
-        public void CustTown/City()
+        public void CustTownCity()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
