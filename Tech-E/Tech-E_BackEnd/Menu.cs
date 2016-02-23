@@ -19,10 +19,17 @@ namespace Tech_E_BackEnd
 
         private void button1_Click(object sender, EventArgs e)
         {
+            staff_productlist staffpro = new staff_productlist();
+            staffpro.Show();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }

@@ -9,7 +9,7 @@ namespace Tech_E_UnitTestProject
     {
         // Start Lead Programmer 09/02/2016
         [TestMethod]
-        public void InstanceOK()
+        public void CustInstanceOK()
 
         {
             //create an instance of the class we want to create
@@ -19,7 +19,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void CustomerNo()
+        public void CustCustomerNo()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -33,7 +33,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void FirstName()
+        public void CustFirstName()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -47,7 +47,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void LastName()
+        public void CustLastName()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -62,7 +62,7 @@ namespace Tech_E_UnitTestProject
         // Finish Lead Programmer 09/02/2016
 
         [TestMethod]
-        public void Password()
+        public void CustPassword()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -76,7 +76,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void PhoneNo()
+        public void CustPhoneNo()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -86,6 +86,48 @@ namespace Tech_E_UnitTestProject
             ACustomer.PhoneNo = PhoneNumber;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.PhoneNo, PhoneNumber);
+
+        }
+
+        [TestMethod]
+        public void CustEmailAddress()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string AEmailAddress = "Peter@Peter.co.uk";
+            //assign the data to the property
+            ACustomer.EmailAddress = AEmailAddress;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.EmailAddress, AEmailAddress);
+
+        }
+
+        [TestMethod]
+        public void CustAddressLine1()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string AAddressLine1 = "1 Fake Lane";
+            //assign the data to the property
+            ACustomer.AddressLine1 = AAddressLine1;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.AddressLine1, AAddressLine1);
+
+        }
+
+        [TestMethod]
+        public void CustAddressLine2()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string AAddressLine2 = "1 Fake Lane";
+            //assign the data to the property
+            ACustomer.AddressLine2 = AAddressLine2;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.AddressLine2, AAddressLine2);
 
         }
 
