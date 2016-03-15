@@ -216,7 +216,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is Ok 
             Boolean Ok = true;
             //create some test data to use with the method
-            Int32 PaymentNo = 32;
+            Int32 PaymentNo = 21;
             //invoke the meothod
             Found = Apayment.Find(PaymentNo);
             //check the paymentNo
@@ -227,6 +227,28 @@ namespace Tech_E_UnitTestProject
             //test to see that the result is correct
             Assert.IsTrue(Ok);
 
+        }
+        [TestMethod]
+        public void TestActiveFound()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is Ok 
+            Boolean Ok = true;
+            //create some test data to use with the method
+            Int32 PaymentNo = 21;
+            //invoke the meothod
+            Found = Apayment.Find(PaymentNo);
+            //check the property
+            if (Apayment.Active != true)
+            {
+                Ok = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(Ok);
+            
         }
     }
 }

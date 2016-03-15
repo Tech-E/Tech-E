@@ -55,5 +55,7 @@ namespace Tech_E_ClassLibrary
             //always return true
             return true;
         }
+
+        public bool Active { get; set; }
     }
 }
