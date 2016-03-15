@@ -22,7 +22,123 @@ namespace Tech_E_UnitTestProject
             Assert.AreEqual(TestProduct.Product, TestData);
         }
 
+        [TestMethod]
+        public void ProductNo()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create some test data to assign to the property
+            int ProductNumber = 1;
+            //assign the data to the property
+            AProduct.ProductNo = ProductNumber;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.ProductNo, ProductNumber);
+        }
 
+        [TestMethod]
+        public void ProductName()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create some test data to assign to the property
+            string AProductName = "Monitor";
+            //assign the data to the property
+            AProduct.ProductName = AProductName;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.ProductName, AProductName);
+        }
+              
+
+        [TestMethod]
+        public void ProductDescription()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create test data 
+            string AProductDescription = "24 Inch Monitor...";
+            //assign the data to the property
+            AProduct.ProductDescription = AProductDescription;
+            //two values are the same
+            Assert.AreEqual(AProduct.ProductDescription, AProduct);
+        }
+
+        [TestMethod]
+        public void ProductPrice()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create test data 
+            decimal AProductPrice = 109;
+            //assign the data to the property
+            AProduct.ProductPrice = AProductPrice;
+            //two values are the same
+            Assert.AreEqual(AProduct.ProductPrice, AProduct);
+        }
+
+        [TestMethod]
+        public void ProductManufacturer()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create test data 
+            string AProductManufacturer = "Dell";
+            //assign the data to the property
+            AProduct.ProductManufacturer = AProductManufacturer;
+            //two values are the same
+            Assert.AreEqual(AProduct.ProductManufacturer, AProduct);
+        }
+
+        [TestMethod]
+        public void ProductsInStock()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create test data 
+            int AStock = 6;
+            //assign the data to the property
+            AProduct.ProductsInStock = AStock;
+            //two values are the same
+            Assert.AreEqual(AProduct.ProductsInStock, AProduct);
+        }
+
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 ProductNo = 1;            
+            //invoke the method
+            Found = AProduct.Find(ProductNo);
+            //test to see that the result is correct            
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestProductNoFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 15;
+            //invoke the method
+            Found = AProduct.Find(ProductNo);
+            //check the product no
+            if (AProduct.ProductNo != 15)
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+               
         [TestMethod]
         public void ProductNoExtremeMin()
         {
@@ -78,8 +194,7 @@ namespace Tech_E_UnitTestProject
             Boolean OK = TestProductNo.Valid(1013741824);
             Assert.IsTrue(OK);
         }
-
-
+        
         [TestMethod]
         public void ProductNameMinBoundary()
         {

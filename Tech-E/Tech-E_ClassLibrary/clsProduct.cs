@@ -34,5 +34,22 @@ namespace Tech_E_UnitTestProject
                 return false;
             }
         }
-    }
+
+        public string ProductName { get; set; }
+
+        public object ProductNo { get; set; }
+
+        public string ProductDescription { get; set; }
+
+        public decimal ProductPrice { get; set; }
+
+        public string ProductManufacturer { get; set; }
+
+        public int ProductsInStock { get; set; }
+
+        public bool Find(int ProductNo)
+        {
+            throw new NotImplementedException();
+        }
+    }     
 }

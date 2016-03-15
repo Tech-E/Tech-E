@@ -43,7 +43,6 @@ namespace Tech_E_UnitTestProject
             ACustomer.FirstName = AFirstName;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.FirstName, AFirstName);
-
         }
 
         [TestMethod]
@@ -72,7 +71,6 @@ namespace Tech_E_UnitTestProject
             ACustomer.Password = APassword;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.Password, APassword);
-
         }
 
         [TestMethod]
