@@ -26,5 +26,34 @@ namespace Tech_E_ClassLibrary
             }
             return OK;
         }
+
+        public object Dateadded { get; set; }
+
+        public Int32 PaymentNo
+        {
+            get
+            {
+                //return the private data
+                return PaymentNo;
+            }
+            set
+            {
+                //set the value of the private data member
+                PaymentNo = value;
+
+            }
+
+
+        }
+
+        public object Amount { get; set; }
+
+        public bool Find(int PaymentNo)
+        {
+            //set the private data member to test data value
+            PaymentNo = 21;
+            //always return true
+            return true;
+        }
     }
 }

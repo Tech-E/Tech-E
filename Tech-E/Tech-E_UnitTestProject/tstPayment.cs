@@ -151,5 +151,82 @@ namespace Tech_E_UnitTestProject
             Assert.IsFalse(Ok);
 
         }
+
+        [TestMethod]
+        public void PaymentDate()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //create some test data to assign to the property 
+            DateTime TestData = DateTime.Now.Date;
+            //assign the data to the property
+            Apayment.Dateadded = TestData;
+            Assert.AreEqual(Apayment.Dateadded, TestData);
+        }
+
+        [TestMethod]
+        public void PaymentNo()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //create some test data assign to the property
+            Int32 TestData = 2;
+            //assign the data to the property
+            Apayment.PaymentNo = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(Apayment.PaymentNo, TestData);
+
+        }
+
+        [TestMethod]
+        public void Amount()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //create some test data assign to the property
+            Int32 TestData = 200;
+            //assign the data to the property
+            Apayment.Amount = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(Apayment.Amount, TestData);
+
+        }
+        [TestMethod]
+        public void FindMethodOk()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 PaymentNo = 2;
+            //invoke the method
+            Found = Apayment.Find(PaymentNo);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestPaymentNoFound()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is Ok 
+            Boolean Ok = true;
+            //create some test data to use with the method
+            Int32 PaymentNo = 32;
+            //invoke the meothod
+            Found = Apayment.Find(PaymentNo);
+            //check the paymentNo
+            if (Apayment.PaymentNo != 21)
+            {
+                Ok = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(Ok);
+
+        }
     }
 }
