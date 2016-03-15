@@ -131,7 +131,7 @@ namespace Tech_E_UnitTestProject
             //invoke the method
             Found = AProduct.Find(ProductNo);
             //check the product no
-            if (AProduct.ProductNo != 15)
+            if (Convert.ToInt32(AProduct.ProductNo) != 15)
             {
                 OK = false;
             }
