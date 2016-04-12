@@ -158,5 +158,19 @@ namespace Tech_E_UnitTestProject
 
         }
 
+        [TestMethod]
+        public void CustUserName()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Create some test data to assign to the property
+            string ATown = "London";
+            //assign the data to the property
+            ACustomer.UserName = AUserName;
+            //test to see that the two values are the same
+            Assert.AreEqual(ACustomer.UserName, AUserName);
+
+        }
+
     }
 }
