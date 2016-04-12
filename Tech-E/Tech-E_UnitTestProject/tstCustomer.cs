@@ -164,12 +164,49 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            string ATown = "London";
+            string AUserName = "topdog5000";
             //assign the data to the property
             ACustomer.UserName = AUserName;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.UserName, AUserName);
 
+        }
+
+        [TestMethod]
+        public void CustFindMethod()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 CustomerNo = 1;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //test to see if the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestCustomerNoFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.CustomerNo != 21)
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
         }
 
     }
