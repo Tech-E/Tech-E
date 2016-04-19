@@ -5,10 +5,22 @@ namespace Tech_E_ClassLibrary
     public class clsPayment
     {
 
-        private DateTime dateAdded;
+       
         private string paymentMethod;
+        public string PaymentMethod { 
+           get
+            {
+                //return the private data
+                return paymentMethod;
+            }
+            set
+            {
+                //set the value of the private data member
+                paymentMethod= value;
 
-        public string PaymentMethod { get; set; }
+            }
+        
+        }
 
         public bool Valid(string SomePaymentMethod)
         {
@@ -28,8 +40,20 @@ namespace Tech_E_ClassLibrary
             }
             return OK;
         }
+        private DateTime dateAdded;
+        public DateTime Dateadded {
+            get
+            {
+                //return the private data
+                return dateAdded;
+            }
+            set
+            {
+                //set the value of the private data member
+                dateAdded = value;
 
-        public object Dateadded { get; set; }
+            }
+        }
 
         private Int32 paymentNo;
         public int PaymentNo
@@ -48,17 +72,49 @@ namespace Tech_E_ClassLibrary
 
 
         }
+        private decimal amount;
+        public decimal Amount {
+            get
+            {
+                //return the private data
+                return amount;
+            }
+            set
+            {
+                //set the value of the private data member
+                amount = value;
 
-        public object Amount { get; set; }
+            }
+        }
 
         public bool Find(int PaymentNo)
         {
             //set the private data member to test data value
-            PaymentNo = 21;
+            paymentNo = 21;
+            amount = 200;
+            paymentMethod = "paypal";
+            dateAdded = Convert.ToDateTime("19/04/2016");
+            active = true;
             //always return true
             return true;
         }
+        private Boolean active;
+        public bool Active {
+            get
+            {
+                //return the private data
+                return active;
+            }
+            set
+            {
+                //set the value of the private data member
+                active = value;
 
-        public bool Active { get; set; }
+            }
+        
+        }
     }
 }
+
+
+        
