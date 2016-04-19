@@ -14,7 +14,9 @@ namespace Tech_E_ClassLibrary
         private String firstName;
         private String lastName;
         private String password;
-        private Int32 phoneNo;
+        private Int64 phoneNo;
+        private String emailAddress;
+        private String addressLine1;
 
         public int CustomerNo 
         { 
@@ -76,7 +78,7 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public Int32 PhoneNo
+        public Int64 PhoneNo
         {
             get
             {
@@ -91,9 +93,35 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public string EmailAddress { get; set; }
+        public string EmailAddress 
+        {
+            get
+            {
+                //return the private data
+                return emailAddress;
+            }
+            set
+            {
+                //set the value of the private data member
+                emailAddress = value;
 
-        public string AddressLine1 { get; set; }
+            }
+        }
+
+        public string AddressLine1
+        {
+            get
+            {
+                //return the private data
+                return addressLine1;
+            }
+            set
+            {
+                //set the value of the private data member
+                addressLine1 = value;
+
+            }
+        }
 
         public string AddressLine2 { get; set; }
 
@@ -111,6 +139,8 @@ namespace Tech_E_ClassLibrary
             lastName = "Anderson";
             password = "password";
             phoneNo = 07123123123;
+            emailAddress = "test@email.com";
+            addressLine1 = "Test Street";
             //always return true
             return true;
         }

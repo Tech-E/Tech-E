@@ -79,7 +79,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            Int32 PhoneNumber = 1;
+            Int64 PhoneNumber = 1;
             //assign the data to the property
             ACustomer.PhoneNo = PhoneNumber;
             //test to see that the two values are the same
@@ -290,6 +290,28 @@ namespace Tech_E_UnitTestProject
             Found = ACustomer.Find(CustomerNo);
             //chech the address no
             if (ACustomer.PhoneNo != 07123123123)
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustEmailAddressFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.EmailAddress != "test@email.com")
             {
                 OK = false;
             }
