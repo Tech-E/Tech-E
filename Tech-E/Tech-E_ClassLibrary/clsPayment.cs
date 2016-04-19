@@ -29,17 +29,18 @@ namespace Tech_E_ClassLibrary
 
         public object Dateadded { get; set; }
 
-        public Int32 PaymentNo
+        private Int32 paymentNo;
+        public int PaymentNo
         {
             get
             {
                 //return the private data
-                return PaymentNo;
+                return paymentNo;
             }
             set
             {
                 //set the value of the private data member
-                PaymentNo = value;
+                paymentNo = value;
 
             }
 
