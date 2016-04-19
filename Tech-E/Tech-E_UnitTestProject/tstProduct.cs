@@ -59,7 +59,7 @@ namespace Tech_E_UnitTestProject
             //assign the data to the property
             AProduct.ProductDescription = AProductDescription;
             //two values are the same
-            Assert.AreEqual(AProduct.ProductDescription, AProduct);
+            Assert.AreEqual(AProduct.ProductDescription, AProductDescription);
         }
 
         [TestMethod]
@@ -72,7 +72,7 @@ namespace Tech_E_UnitTestProject
             //assign the data to the property
             AProduct.ProductPrice = AProductPrice;
             //two values are the same
-            Assert.AreEqual(AProduct.ProductPrice, AProduct);
+            Assert.AreEqual(AProduct.ProductPrice, AProductPrice);
         }
 
         [TestMethod]
@@ -85,8 +85,9 @@ namespace Tech_E_UnitTestProject
             //assign the data to the property
             AProduct.ProductManufacturer = AProductManufacturer;
             //two values are the same
-            Assert.AreEqual(AProduct.ProductManufacturer, AProduct);
+            Assert.AreEqual(AProduct.ProductManufacturer, AProductManufacturer);
         }
+
 
         [TestMethod]
         public void ProductsInStock()
@@ -94,11 +95,11 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create test data 
-            int AStock = 6;
+            int AStock = 1;
             //assign the data to the property
             AProduct.ProductsInStock = AStock;
             //two values are the same
-            Assert.AreEqual(AProduct.ProductsInStock, AProduct);
+            Assert.AreEqual(AProduct.ProductsInStock, AStock);
         }
 
 

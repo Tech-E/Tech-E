@@ -45,7 +45,19 @@ namespace Tech_E_UnitTestProject
 
         public string ProductManufacturer { get; set; }
 
-        public int ProductsInStock { get; set; }
+        private int productsInStock;
+        public int ProductsInStock
+        {
+            get
+            {
+                return productsInStock;
+            }
+
+            set
+            {
+                productsInStock = value;
+            }
+        }
 
         public bool Find(int ProductNo)
         {
