@@ -16,17 +16,5 @@ namespace Tech_E_BackEnd
         {
             InitializeComponent();
         }
-
-        private void lstAppointments_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the '_Tech_EDataSet.tblAppointment' table. You can move, or remove it, as needed.
-            this.tblAppointmentTableAdapter.Fill(this._Tech_EDataSet.tblAppointment);
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
