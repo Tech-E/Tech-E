@@ -57,6 +57,7 @@
     <Compile Include="tstPayment.cs" />
     <Compile Include="tstStaffs.cs" />
     <Compile Include="tstProduct.cs" />
+    <Compile Include="tstAppointment.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tech-E_ClassLibrary\Tech-E_ClassLibrary.csproj">
