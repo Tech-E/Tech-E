@@ -188,7 +188,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void TestCustomerNoFound()
+        public void CustCustomerNoFound()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
@@ -202,6 +202,28 @@ namespace Tech_E_UnitTestProject
             Found = ACustomer.Find(CustomerNo);
             //chech the address no
             if (ACustomer.CustomerNo != 21)
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustFirstNameFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.FirstName != "Peter")
             {
                 OK = false;
             }
