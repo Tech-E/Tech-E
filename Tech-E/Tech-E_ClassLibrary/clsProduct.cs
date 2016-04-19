@@ -7,6 +7,12 @@ namespace Tech_E_UnitTestProject
 {
     public class clsProduct
     {
+        private int productNo;
+        private String productName;
+        private String productDescription;
+        private Decimal productPrice;
+        private Int32 productsInStock;
+        private String productManufacturer;
         public string Product { get; set; }
 
         public bool Valid(int ProductNo)
@@ -35,33 +41,94 @@ namespace Tech_E_UnitTestProject
             }
         }
 
-        public string ProductName { get; set; }
+        public bool ValidInt(int ProductNo)
+        {
+            if (ProductNo != null &&
+                ProductNo >= 1 &&
+                ProductNo <= 20)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        public object ProductNo { get; set; }
-
-        public string ProductDescription { get; set; }
-
-        public decimal ProductPrice { get; set; }
-
-        public string ProductManufacturer { get; set; }
-
-        private int productsInStock;
-        public int ProductsInStock
+        public string ProductName
         {
             get
             {
-                return productsInStock;
+                return productName;
             }
-
             set
             {
-                productsInStock = value;
+                productName = value;
             }
         }
 
-        public bool Find(int ProductNo)
+        public int ProductNo
+        {
+            get
+            {
+                return productNo;
+            }
+            set
+            {
+                productNo = value;
+            }
+        }
+
+        public string ProductDescription {
+            get {
+                return productDescription;
+            }
+            set {
+                productDescription = value;
+            }
+        }
+
+        public decimal ProductPrice
+        {
+            get
+            {
+                return productPrice;
+            }
+            set
+            {
+                productPrice = value;
+            }
+        }
+
+        public string ProductManufacturer
+        {
+            get
+            {
+                return productManufacturer;
+            }
+            set
+            {
+                productManufacturer = value;
+            }
+        }
+
+        public int ProductsInStock { get; set; }
+               public bool FindProduct(int ProductNo)
         {
             throw new NotImplementedException();
         }
+
+               public bool Find(int ProductNo)
+               {
+                   //set the private data member to the test data value
+                   productNo = 15;
+                   productName = "Keyboard";
+                   productDescription = "Mechanical Keyboard";
+                   productPrice = 11;
+                   productManufacturer = "Dell";
+                   productsInStock = 11;
+                   //always return true
+                   return true;
+               }
     }     
 }

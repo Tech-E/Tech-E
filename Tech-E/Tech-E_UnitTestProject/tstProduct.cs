@@ -9,7 +9,9 @@ namespace Tech_E_UnitTestProject
         [TestMethod]
         public void InstanceOK()
         {
+            //create an instance of the product class
             clsProduct TestProduct = new clsProduct();
+            //test to see that exists
             Assert.IsNotNull(TestProduct);
         }
 
@@ -117,6 +119,7 @@ namespace Tech_E_UnitTestProject
             //test to see that the result is correct            
             Assert.IsTrue(Found);
         }
+        
 
         [TestMethod]
         public void TestProductNoFound()
@@ -139,7 +142,51 @@ namespace Tech_E_UnitTestProject
             //test to see that result is correct
             Assert.IsTrue(OK);
         }
-               
+
+        [TestMethod]
+        public void TestProductNameFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 11;
+            //invoke the mothod
+            Found = AProduct.Find(ProductNo);
+            //chech the address no
+            if (AProduct.ProductName != "Keyboard")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestProductDescriptionFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 11;
+            //invoke the mothod
+            Found = AProduct.Find(ProductNo);
+            //chech the address no
+            if (AProduct.ProductDescription != "Mechanical Keyboard")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+                               
         [TestMethod]
         public void ProductNoExtremeMin()
         {
