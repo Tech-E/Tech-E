@@ -6,21 +6,24 @@ using System.Text;
 
 namespace Tech_E_ClassLibrary
 {
-    
+
     public class clsCustomer
     {
         //private data member for the CustomerNo property
-        private int customerNo;
+        private Int32 customerNo;
         private String firstName;
         private String lastName;
         private String password;
-        private Int64 phoneNo;
+        private String phoneNo;
         private String emailAddress;
         private String addressLine1;
         private String addressLine2;
+        private String postCode;
+        private String town;
+        private String userName;
 
-        public int CustomerNo 
-        { 
+        public Int32 CustomerNo
+        {
             get
             {
                 //return the private data
@@ -30,7 +33,7 @@ namespace Tech_E_ClassLibrary
             {
                 //set the value of the private data member
                 customerNo = value;
- 
+
             }
         }
 
@@ -79,7 +82,7 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public Int64 PhoneNo
+        public String PhoneNo
         {
             get
             {
@@ -94,7 +97,7 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public string EmailAddress 
+        public string EmailAddress
         {
             get
             {
@@ -124,7 +127,7 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public string AddressLine2 
+        public string AddressLine2
         {
             get
             {
@@ -139,26 +142,83 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public object Postcode { get; set; }
-
-        public object Town { get; set; }
-
-        public string UserName { get; set; }
-
-        public bool Find(int CustomerNo)
+        public String PostCode
         {
-           //set the private data member to the test data value
-            customerNo = 21;
-            firstName = "Peter";
-            lastName = "Anderson";
-            password = "password";
-            phoneNo = 07123123123;
-            emailAddress = "test@email.com";
-            addressLine1 = "Test Street";
-            addressLine2 = "Test";
-           
-            //always return true
-            return true;
+            get
+            {
+                //return the private data
+                return postCode;
+            }
+            set
+            {
+                //set the value of the private data member
+                postCode = value;
+
+            }
+        }
+
+        public String Town
+        {
+            get
+            {
+                //return the private data
+                return town;
+            }
+            set
+            {
+                //set the value of the private data member
+                town = value;
+
+            }
+        }
+
+        public string UserName
+        {
+            get
+            {
+                //return the private data
+                return userName;
+            }
+            set
+            {
+                //set the value of the private data member
+                userName = value;
+
+            }
+        }
+
+        public bool Find(Int32 CustomerNo)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the customer no to search for
+            DB.AddParameter("@CustomerNo", CustomerNo);
+            //Execute the stored Procedure
+            DB.Execute("sproc_tblCustomer_FilterByCustomerNo");
+            //if one record is found (there should be one or zero!)
+            if (DB.Count == 1)
+            {
+                //set the private data member to the test data value
+                customerNo = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerNo"]);
+                firstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                lastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                password = Convert.ToString(DB.DataTable.Rows[0]["Password"]);
+                phoneNo = Convert.ToString(DB.DataTable.Rows[0]["PhoneNo"]);
+                emailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                addressLine1 = Convert.ToString(DB.DataTable.Rows[0]["AddressLine1"]);
+                addressLine2 = Convert.ToString(DB.DataTable.Rows[0]["AddressLine2"]);
+                postCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                town = Convert.ToString(DB.DataTable.Rows[0]["Town/City"]);
+                userName = Convert.ToString(DB.DataTable.Rows[0]["UserName"]);
+                //return that everything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
     }
 }

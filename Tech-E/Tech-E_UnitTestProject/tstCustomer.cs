@@ -24,7 +24,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            int Number = 1;
+            Int32 Number = 1;
             //assign the data to the property
             ACustomer.CustomerNo = Number;
             //test to see that the two values are the same
@@ -79,7 +79,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Create some test data to assign to the property
-            Int64 PhoneNumber = 1;
+            String PhoneNumber = "07123123123";
             //assign the data to the property
             ACustomer.PhoneNo = PhoneNumber;
             //test to see that the two values are the same
@@ -137,9 +137,9 @@ namespace Tech_E_UnitTestProject
             //Create some test data to assign to the property
             string APostcode = "SE28 8EU";
             //assign the data to the property
-            ACustomer.Postcode = APostcode;
+            ACustomer.PostCode = APostcode;
             //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.Postcode, APostcode);
+            Assert.AreEqual(ACustomer.PostCode, APostcode);
 
         }
 
@@ -173,14 +173,14 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void CustFindMethod()
+        public void CustFindMethodOK()
         {
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //Boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 CustomerNo = 1;
+            Int32 CustomerNo = 21;
             //invoke the mothod
             Found = ACustomer.Find(CustomerNo);
             //test to see if the result is correct
@@ -289,7 +289,7 @@ namespace Tech_E_UnitTestProject
             //invoke the mothod
             Found = ACustomer.Find(CustomerNo);
             //chech the address no
-            if (ACustomer.PhoneNo != 07123123123)
+            if (ACustomer.PhoneNo != "07123123123")
             {
                 OK = false;
             }
@@ -355,7 +355,73 @@ namespace Tech_E_UnitTestProject
             //invoke the mothod
             Found = ACustomer.Find(CustomerNo);
             //chech the address no
-            if (ACustomer.AddressLine2 != "Test Street")
+            if (ACustomer.AddressLine2 != "Test")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPostCodeFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.PostCode != "T3ST P0ST")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustTownFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.Town != "Test")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustUserNameFound()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.UserName != "TestUserName")
             {
                 OK = false;
             }
