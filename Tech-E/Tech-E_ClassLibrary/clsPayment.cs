@@ -4,7 +4,9 @@ namespace Tech_E_ClassLibrary
 {
     public class clsPayment
     {
-      
+
+        private DateTime dateAdded;
+        private string paymentMethod;
 
         public string PaymentMethod { get; set; }
 
