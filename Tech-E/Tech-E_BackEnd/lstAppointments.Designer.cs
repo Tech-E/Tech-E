@@ -56,15 +56,14 @@
             this.appointmentTimeDataGridViewTextBoxColumn,
             this.appointmentLocationDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblAppointmentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(464, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(385, 349);
+            this.button3.Location = new System.Drawing.Point(364, 343);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 46);
             this.button3.TabIndex = 9;
@@ -73,7 +72,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(248, 349);
+            this.button2.Location = new System.Drawing.Point(227, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 46);
             this.button2.TabIndex = 8;
@@ -82,7 +81,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(113, 349);
+            this.button1.Location = new System.Drawing.Point(92, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 46);
             this.button1.TabIndex = 7;
@@ -93,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(231, 122);
+            this.label1.Location = new System.Drawing.Point(210, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 20);
             this.label1.TabIndex = 6;
@@ -137,20 +136,19 @@
             this.appointmentLocationDataGridViewTextBoxColumn.DataPropertyName = "AppointmentLocation";
             this.appointmentLocationDataGridViewTextBoxColumn.HeaderText = "AppointmentLocation";
             this.appointmentLocationDataGridViewTextBoxColumn.Name = "appointmentLocationDataGridViewTextBoxColumn";
-            this.appointmentLocationDataGridViewTextBoxColumn.Width = 120;
             // 
             // lstAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 516);
+            this.ClientSize = new System.Drawing.Size(585, 504);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "lstAppointments";
-            this.Text = "lsAppointments";
+            this.Text = "lstAppointments";
             this.Load += new System.EventHandler(this.lstAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Tech_EDataSet)).EndInit();

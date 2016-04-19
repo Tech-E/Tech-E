@@ -23,10 +23,5 @@ namespace Tech_E_BackEnd
             this.tblAppointmentTableAdapter.Fill(this._Tech_EDataSet.tblAppointment);
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
