@@ -65,10 +65,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Tech-E.mdf" />
-    <Content Include="App_Data\Tech-E_log.ldf">
-      <DependentUpon>Tech-E.mdf</DependentUpon>
-    </Content>
     <Content Include="Default.html" />
     <Content Include="Products.aspx" />
     <Content Include="Web.config" />
