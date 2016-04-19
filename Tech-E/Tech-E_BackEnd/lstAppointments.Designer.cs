@@ -28,20 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this._Tech_EDataSet = new Tech_E_BackEnd._Tech_EDataSet();
+            this.tblAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblAppointmentTableAdapter = new Tech_E_BackEnd._Tech_EDataSetTableAdapters.tblAppointmentTableAdapter();
+            this.appointmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appointmentLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Tech_EDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAppointmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(92, 163);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.appointmentIDDataGridViewTextBoxColumn,
+            this.appointmentDateDataGridViewTextBoxColumn,
+            this.appointmentTimeDataGridViewTextBoxColumn,
+            this.appointmentLocationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblAppointmentBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(61, 163);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(400, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 10;
             // 
             // button3
@@ -81,6 +98,45 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "List Appointments";
             // 
+            // _Tech_EDataSet
+            // 
+            this._Tech_EDataSet.DataSetName = "_Tech_EDataSet";
+            this._Tech_EDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblAppointmentBindingSource
+            // 
+            this.tblAppointmentBindingSource.DataMember = "tblAppointment";
+            this.tblAppointmentBindingSource.DataSource = this._Tech_EDataSet;
+            // 
+            // tblAppointmentTableAdapter
+            // 
+            this.tblAppointmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // appointmentIDDataGridViewTextBoxColumn
+            // 
+            this.appointmentIDDataGridViewTextBoxColumn.DataPropertyName = "AppointmentID";
+            this.appointmentIDDataGridViewTextBoxColumn.HeaderText = "AppointmentID";
+            this.appointmentIDDataGridViewTextBoxColumn.Name = "appointmentIDDataGridViewTextBoxColumn";
+            this.appointmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // appointmentDateDataGridViewTextBoxColumn
+            // 
+            this.appointmentDateDataGridViewTextBoxColumn.DataPropertyName = "AppointmentDate";
+            this.appointmentDateDataGridViewTextBoxColumn.HeaderText = "AppointmentDate";
+            this.appointmentDateDataGridViewTextBoxColumn.Name = "appointmentDateDataGridViewTextBoxColumn";
+            // 
+            // appointmentTimeDataGridViewTextBoxColumn
+            // 
+            this.appointmentTimeDataGridViewTextBoxColumn.DataPropertyName = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.HeaderText = "AppointmentTime";
+            this.appointmentTimeDataGridViewTextBoxColumn.Name = "appointmentTimeDataGridViewTextBoxColumn";
+            // 
+            // appointmentLocationDataGridViewTextBoxColumn
+            // 
+            this.appointmentLocationDataGridViewTextBoxColumn.DataPropertyName = "AppointmentLocation";
+            this.appointmentLocationDataGridViewTextBoxColumn.HeaderText = "AppointmentLocation";
+            this.appointmentLocationDataGridViewTextBoxColumn.Name = "appointmentLocationDataGridViewTextBoxColumn";
+            // 
             // lstAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,7 +149,10 @@
             this.Controls.Add(this.label1);
             this.Name = "lstAppointments";
             this.Text = "lstAppointments";
+            this.Load += new System.EventHandler(this.lstAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Tech_EDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAppointmentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +165,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private _Tech_EDataSet _Tech_EDataSet;
+        private System.Windows.Forms.BindingSource tblAppointmentBindingSource;
+        private _Tech_EDataSetTableAdapters.tblAppointmentTableAdapter tblAppointmentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentLocationDataGridViewTextBoxColumn;
     }
 }
