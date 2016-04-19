@@ -7,7 +7,7 @@ namespace Tech_E_UnitTestProject
     [TestClass]
     public class tstAppointment
     {
-        // Start Lead Programmer 09/02/2016
+        // Start Lead Programmer nas 09/02/2016
         [TestMethod]
         public void InstanceOK()
         {
