@@ -10,8 +10,11 @@ namespace Tech_E_ClassLibrary
     public class clsCustomer
     {
         //private data member for the CustomerNo property
-        private Int32 customerNo;
+        private int customerNo;
         private String firstName;
+        private String lastName;
+        private String password;
+        private Int32 phoneNo;
 
         public int CustomerNo 
         { 
@@ -43,11 +46,50 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public object LastName { get; set; }
+        public string LastName
+        {
+            get
+            {
+                //return the private data
+                return lastName;
+            }
+            set
+            {
+                //set the value of the private data member
+                lastName = value;
 
-        public string Password { get; set; }
+            }
+        }
 
-        public int PhoneNo { get; set; }
+        public string Password
+        {
+            get
+            {
+                //return the private data
+                return password;
+            }
+            set
+            {
+                //set the value of the private data member
+                password = value;
+
+            }
+        }
+
+        public Int32 PhoneNo
+        {
+            get
+            {
+                //return the private data
+                return phoneNo;
+            }
+            set
+            {
+                //set the value of the private data member
+                phoneNo = value;
+
+            }
+        }
 
         public string EmailAddress { get; set; }
 
@@ -66,6 +108,9 @@ namespace Tech_E_ClassLibrary
            //set the private data member to the test data value
             customerNo = 21;
             firstName = "Peter";
+            lastName = "Anderson";
+            password = "password";
+            phoneNo = 07123123123;
             //always return true
             return true;
         }
