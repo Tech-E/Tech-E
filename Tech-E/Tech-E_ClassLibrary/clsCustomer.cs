@@ -17,6 +17,7 @@ namespace Tech_E_ClassLibrary
         private Int64 phoneNo;
         private String emailAddress;
         private String addressLine1;
+        private String addressLine2;
 
         public int CustomerNo 
         { 
@@ -123,7 +124,20 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public string AddressLine2 { get; set; }
+        public string AddressLine2 
+        {
+            get
+            {
+                //return the private data
+                return addressLine2;
+            }
+            set
+            {
+                //set the value of the private data member
+                addressLine2 = value;
+
+            }
+        }
 
         public object Postcode { get; set; }
 
@@ -141,6 +155,8 @@ namespace Tech_E_ClassLibrary
             phoneNo = 07123123123;
             emailAddress = "test@email.com";
             addressLine1 = "Test Street";
+            addressLine2 = "Test";
+           
             //always return true
             return true;
         }

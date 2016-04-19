@@ -318,5 +318,49 @@ namespace Tech_E_UnitTestProject
             //test to see if the result is correct
             Assert.IsTrue(OK);
         }
+
+        [TestMethod]
+        public void CustAddressLine1Found()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.AddressLine1 != "Test Street")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustAddressLine2Found()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 CustomerNo = 21;
+            //invoke the mothod
+            Found = ACustomer.Find(CustomerNo);
+            //chech the address no
+            if (ACustomer.AddressLine2 != "Test Street")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
     }
 }
