@@ -8,15 +8,7 @@ namespace Tech_E_UnitTestProject
     public class tstAppointment
     {
         // Start Lead Programmer nas 09/02/2016
-        [TestMethod]
-        public void InstanceOK()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //test to see that it exits
-            Assert.IsNotNull(ACustomer);
-        }
-
+      
         [TestMethod]
         public void CustomerNo()
         {
@@ -66,18 +58,53 @@ namespace Tech_E_UnitTestProject
             [TestMethod]
             public void InstanceOK()
             {
+                //create an instance of the class we want to create
                 clsAppointments TestAppointments = new clsAppointments();
+                //test to see that it exits
                 Assert.IsNotNull(TestAppointments);
+            }
+            [TestMethod]
+            public void ActivePropertyOK()
+            {
+                //create and instance of the class we want to create
+                clsAppointments AnAppointment = new clsAppointments();
+                //create some test data to assign to the property
+                Boolean TestData = true;
+                AnAppointment.Active = TestData;
+                //test to see that the two values are the same
+                Assert.AreEqual(AnAppointment.Active, TestData);
             }
 
 
             [TestMethod]
-            public void AppointmentsOK()
+            public void AppointmentsLocationOK()
             {
                 clsAppointments TestAppointments = new clsAppointments();
                 string TestData = "Loughborough";
                 TestAppointments.AppointmentLocation = TestData;
                 Assert.AreEqual(TestAppointments.AppointmentLocation, TestData);
+            }
+
+            [TestMethod]
+            public void DateAddedPropertyOK()
+            {
+                //create and instance of the class we want to create
+                clsAppointments AnAppointment = new clsAppointments();
+                //create some teest data to assign to the property
+                DateTime TestData = DateTime.Now.Date;
+                //Assign the Data to the property
+                AnAppointment.Dateadded = TestData;
+                //test to see that the two values are the same
+                Assert.AreEqual(AnAppointment.Dateadded, TestData);
+
+            }
+            [TestMethod]
+            public void AppointmentNoPropertyOK()
+            {
+                clsAppointments AnAppointment = new clsAppointments();
+                Int32 TestData = 1;
+                AnAppointment.AppointmentID = TestData;
+                Assert.AreEqual(AnAppointment.AppointmentID, TestData);
             }
 
             [TestMethod]
@@ -222,6 +249,8 @@ namespace Tech_E_UnitTestProject
                 Apayment.Dateadded = TestData;
                 Assert.AreEqual(Apayment.Dateadded, TestData);
             }
+         
+
         }
     }
 }

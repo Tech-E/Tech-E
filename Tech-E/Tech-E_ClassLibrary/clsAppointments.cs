@@ -59,5 +59,7 @@ namespace Tech_E_ClassLibrary
         }
 
         public DateTime Dateadded { get; set; }
+
+        public bool Active { get; set; }
     }
 }
