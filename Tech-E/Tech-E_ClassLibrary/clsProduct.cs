@@ -13,6 +13,8 @@ namespace Tech_E_UnitTestProject
         private Decimal productPrice;
         private Int32 productsInStock;
         private String productManufacturer;
+
+
         public string Product { get; set; }
 
         public bool Valid(int ProductNo)
@@ -112,8 +114,19 @@ namespace Tech_E_UnitTestProject
             }
         }
 
-        public int ProductsInStock { get; set; }
-               public bool FindProduct(int ProductNo)
+        public Int32 ProductsInStock
+        {
+            get
+            {
+                return productsInStock;
+            }
+            set
+            {
+                productsInStock = value;
+            }
+        }
+
+        public bool FindProduct(int ProductNo)
         {
             throw new NotImplementedException();
         }
@@ -122,7 +135,7 @@ namespace Tech_E_UnitTestProject
                {
                    //set the private data member to the test data value
                    productNo = 15;
-                   productName = "Keyboard";
+                   productName = "Test Name";
                    productDescription = "Mechanical Keyboard";
                    productPrice = 11;
                    productManufacturer = "Dell";

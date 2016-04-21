@@ -7,7 +7,7 @@ namespace Tech_E_UnitTestProject
     public class tstProduct
     {
         [TestMethod]
-        public void InstanceOK()
+        public void ProductInstanceOK()
         {
             //create an instance of the product class
             clsProduct TestProduct = new clsProduct();
@@ -153,11 +153,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 11;
+            Int32 ProductNo = 15;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
-            //chech the address no
-            if (AProduct.ProductName != "Keyboard")
+            //chech the product name
+            if (AProduct.ProductName != "Test Name")
             {
                 OK = false;
             }
@@ -175,7 +175,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 11;
+            Int32 ProductNo = 15;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
@@ -186,7 +186,29 @@ namespace Tech_E_UnitTestProject
             //test to see if the result is correct
             Assert.IsTrue(OK);
         }
-                               
+
+        [TestMethod]
+        public void TestProductPriceFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 15;
+            //invoke the mothod
+            Found = AProduct.Find(ProductNo);
+            //chech the address no
+            if (AProduct.ProductPrice != 11)
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
         [TestMethod]
         public void ProductNoExtremeMin()
         {
