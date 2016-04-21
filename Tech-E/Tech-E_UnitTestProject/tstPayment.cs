@@ -199,7 +199,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 PaymentNo = 21;
+            Int32 PaymentNo = 222;
             //invoke the method
             Found = Apayment.Find(PaymentNo);
             //test to see that the result is correct
@@ -225,6 +225,297 @@ namespace Tech_E_UnitTestProject
 
 
         }
-     
+
+        [TestMethod]
+        public void PaymentNoMinLessOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "fg"; // this should trigger a error
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMin()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "q";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+        [TestMethod]
+        public void PaymentNoMinPlusOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "qa";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+        [TestMethod]
+        public void PaymentNoMaxLessOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "qarti";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+        [TestMethod]
+        public void PaymentNoMax()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "qartil";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+        [TestMethod]
+        public void PaymentNoMid()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "qar";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+
+        [TestMethod]
+        public void PaymentNoMaxPlusOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "qartil"; //this should fail
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+
+        [TestMethod]
+        public void PaymentNoExtremeMax()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = ""; //this should fail
+            PaymentNo = PaymentNo.PadRight(1, 'q');
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
+        [TestMethod]
+        public void DateAddedExtremeMin()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set todays date
+            TestDate = DateTime.Now.Date;
+            //convert the date to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void DateAddedMinLessOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set todays date
+            TestDate = DateTime.Now.Date;
+            //convert the date to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void DateAddedMin()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set todays date
+            TestDate = DateTime.Now.Date;
+            //convert the date to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void DateAddedMinPlusOne()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less 100 years
+            TestDate = TestDate.AddYears(1);
+            //convert the date to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void DateAddedExtremeMax()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less 100 years
+            TestDate = TestDate.AddYears(100);
+            //convert the date to a string variable
+            string DateAdded = TestDate.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void DateAddedInvalidData()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            //set data added to a non value
+            string DateAdded = "";
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+        }
     }
 }
