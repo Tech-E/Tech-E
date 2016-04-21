@@ -199,14 +199,32 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 PaymentNo = 2;
+            Int32 PaymentNo = 21;
             //invoke the method
             Found = Apayment.Find(PaymentNo);
             //test to see that the result is correct
             Assert.IsTrue(Found);
         }
 
-       
+        [TestMethod]
+        public void ValidMethodOk()
+        {
+            //create an instance of the paymentmethod
+            clsPayment Apayment = new clsPayment();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass to the method
+            string PaymentNo = "25";
+            string Amount = "69.99";
+            string PaymentMethod = "Debit Card";
+            string DateAdded = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+
+
+        }
      
     }
 }
