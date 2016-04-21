@@ -249,8 +249,27 @@ namespace Tech_E_UnitTestProject
                 Apayment.Dateadded = TestData;
                 Assert.AreEqual(Apayment.Dateadded, TestData);
             }
-         
-
+            [TestMethod]
+            public void AppointmentLocationFound()
+            {
+                //create an instance of the class we want to create
+                clsAppointments AnAppointment = new clsAppointments();
+                //Boolean variable to store the result of the validation
+                Boolean Found = false;
+                //boolean variable to record if data is OK (assume it is)
+                Boolean OK = true;
+                //create some test data to use with the method
+                Int32 AppointmentID = 21;
+                //invoke the mothod
+                Found = AnAppointment.Find(AppointmentID);
+                //chech the address no
+                if (AnAppointment.Location != "Leicester")
+                {
+                    OK = false;
+                }
+                //test to see if the result is correct
+                Assert.IsTrue(OK);
+            }
         }
     }
 }

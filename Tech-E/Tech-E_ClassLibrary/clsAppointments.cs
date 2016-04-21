@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace Tech_E_ClassLibrary
 {
     public class clsAppointments
+        
     {
+        private string location;
         public bool Valid(int AppointmentID)
         {
             if (AppointmentID >= 1)
@@ -59,7 +61,22 @@ namespace Tech_E_ClassLibrary
         }
 
         public DateTime Dateadded { get; set; }
+  
+
 
         public bool Active { get; set; }
+
+
+        public string Location
+        {
+            get
+            {
+                return location;
+            }
+            set
+            {
+                location = value;
+            }
+        }
     }
 }
