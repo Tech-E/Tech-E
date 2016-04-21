@@ -39,7 +39,7 @@ namespace Tech_E_ClassLibrary
 
         public bool Find(int AppointmentID)
         {
-            AppointmentID = 21;
+            appointmentID = 21;
             return true;
         }
 
