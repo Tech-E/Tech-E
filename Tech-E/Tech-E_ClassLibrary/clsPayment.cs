@@ -5,10 +5,10 @@ namespace Tech_E_ClassLibrary
     public class clsPayment
     {
 
-       
+
         private string paymentMethod;
-        public string PaymentMethod { 
-           get
+        public string PaymentMethod {
+            get
             {
                 //return the private data
                 return paymentMethod;
@@ -16,10 +16,10 @@ namespace Tech_E_ClassLibrary
             set
             {
                 //set the value of the private data member
-                paymentMethod= value;
+                paymentMethod = value;
 
             }
-        
+
         }
 
         public bool Valid(string SomePaymentMethod)
@@ -89,7 +89,7 @@ namespace Tech_E_ClassLibrary
 
         public bool Find(int PaymentNo)
         {
-          //create an instance of the data connection
+            //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the paramter for the payemntno to search for
             DB.AddParameter("@PaymentNo", PaymentNo);
@@ -105,7 +105,7 @@ namespace Tech_E_ClassLibrary
                 active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 dateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["PaymentNo"]);
                 //return that everthing worked Ok
-                return true;              
+                return true;
             }
             //if no record was found
             else
@@ -127,12 +127,52 @@ namespace Tech_E_ClassLibrary
                 active = value;
 
             }
-        
+
         }
 
         public bool Valid(string PaymentNo, string Amount, string PaymentMethod, string DateAdded)
         {
-           return true;
+            //boolean varible
+            Boolean Ok = true;
+            //temporary varible to store date values
+            DateTime DateTemp;
+            //if the paymentNo is blank
+            if (PaymentNo.Length == 0)
+            {
+                //set the flag ok to false
+                Ok = false;
+            }
+            //if payment no is greater than 6 characters
+            if (PaymentNo.Length > 6)
+            {
+                //set the flag ok to flase
+                Ok = false;
+            }
+
+            //try the date validation assumng the data is a valid date
+            try {
+                //copy the dateadded value to the datetemp variable
+                DateTemp = Convert.ToDateTime(DateAdded);
+                //check to see if the date is less than todays date
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //set the flag ok to false
+                    Ok = false;
+                }
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Ok = false;
+                }
+            }
+            //the data was not a date so flag an error
+            catch
+            {
+                //set the flag ok to false
+                Ok = false;
+            }
+
+            return Ok;
+
         }
     }
 }
