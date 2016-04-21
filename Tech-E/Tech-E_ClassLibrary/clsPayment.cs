@@ -89,14 +89,30 @@ namespace Tech_E_ClassLibrary
 
         public bool Find(int PaymentNo)
         {
-            //set the private data member to test data value
-            paymentNo = 21;
-            amount = 200;
-            paymentMethod = "paypal";
-            dateAdded = Convert.ToDateTime("19/04/2016");
-            active = true;
-            //always return true
-            return true;
+          //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the paramter for the payemntno to search for
+            DB.AddParameter("@PaymentNo", PaymentNo);
+            //excute the stored procedure
+            DB.Execute("sproc_tblPayment_FilterByPaymentNo");
+            //if one record is found( there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the databse to the private data members
+                paymentNo = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentNo"]);
+                amount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
+                paymentMethod = Convert.ToString(DB.DataTable.Rows[0]["PaymentMethod"]);
+                active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                dateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["PaymentNo"]);
+                //return that everthing worked Ok
+                return true;              
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
         private Boolean active;
         public bool Active {
@@ -112,6 +128,11 @@ namespace Tech_E_ClassLibrary
 
             }
         
+        }
+
+        public bool Valid(string PaymentNo, string Amount, string PaymentMethod, string DateAdded)
+        {
+           return true;
         }
     }
 }
