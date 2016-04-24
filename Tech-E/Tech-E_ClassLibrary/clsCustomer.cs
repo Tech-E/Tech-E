@@ -285,6 +285,19 @@ namespace Tech_E_ClassLibrary
                 //set the flag OK to false
                 OK = false;
             }
+
+            //if the last name is blank
+            if (PostCode.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is greater than 50 characters
+            if (PostCode.Length > 9)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
            
             //return the value Ok
             return OK;
