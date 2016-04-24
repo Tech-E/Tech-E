@@ -220,5 +220,19 @@ namespace Tech_E_ClassLibrary
                 return false;
             }
         }
+
+        public bool Valid(string FirstName, string LastName, string AddressLine1, string AddressLine2, string Town, string PostCode, string EmailAddress, string UserName, string Password)
+        {
+            //create a Boolean variable to flag the error
+            Boolean OK = true;
+            //if the FirstName is Blank
+            if (FirstName.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //return the value Ok
+            return OK;
+        }
     }
 }

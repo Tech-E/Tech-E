@@ -428,5 +428,53 @@ namespace Tech_E_UnitTestProject
             //test to see if the result is correct
             Assert.IsTrue(OK);
         }
+
+        [TestMethod]
+        public void CustValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test Town";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "password";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town, 
+                                 PostCode,EmailAddress,UserName,Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustFirstNameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street ";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "password";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
     }
 }
