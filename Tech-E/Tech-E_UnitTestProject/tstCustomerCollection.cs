@@ -40,8 +40,36 @@ namespace Tech_E_UnitTestProject
             TestItem.Password = "password";
             //add the item to the test list
             TestList.Add(TestItem);
-            //test to see that it exists
-            Assert.IsNotNull(AllCustomers);
+            //assign the data to the property
+            AllCustomers.CustomerList = TestList;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllCustomers.CustomerList, TestList);
         }
+
+        [TestMethod]
+        public void CustCustomerListOK()
+        {
+            //create an instance of the class that we want to create 
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //create sometest data to assign to the property
+            clsCustomer TestCustomer = new clsCustomer();
+            //set the properties of the test object
+            TestCustomer.CustomerNo = 1;
+            TestCustomer.FirstName = "Peter";
+            TestCustomer.LastName = "Anderson";
+            TestCustomer.AddressLine1 = "Test Street";
+            TestCustomer.AddressLine2 = "Test";
+            TestCustomer.Town = "Test";
+            TestCustomer.PostCode = "LE3 0QT";
+            TestCustomer.EmailAddress = "test@email.com";
+            TestCustomer.UserName = "test123";
+            TestCustomer.Password = "password";
+            //assign the data to the property
+            AllCustomers.ThisCustomer = TestCustomer;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllCustomers.ThisCustomer, TestCustomer);
+        }
+
+
     }
 }
