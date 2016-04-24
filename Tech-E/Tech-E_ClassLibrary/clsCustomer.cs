@@ -285,7 +285,56 @@ namespace Tech_E_ClassLibrary
                 //set the flag OK to false
                 OK = false;
             }
+
+            //if the last name is blank
+            if (PostCode.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is greater than 50 characters
+            if (PostCode.Length > 9)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the EmailAddress is blank
+            if (EmailAddress.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the EmailAddress is greater than 50 characters
+            if (EmailAddress.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the UserName is blank
+            if (UserName.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
            
+            if (UserName.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+
+            //if the Password is blank
+            if (Password.Length < 8)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+
+            if (Password.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
             //return the value Ok
             return OK;
 
