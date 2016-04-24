@@ -159,10 +159,6 @@ namespace Tech_E_ClassLibrary
                     //set the flag ok to false
                     Ok = false;
                 }
-                if (DateTemp > DateTime.Now.Date)
-                {
-                    Ok = false;
-                }
             }
             //the data was not a date so flag an error
             catch
