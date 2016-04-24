@@ -30,7 +30,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create some test data to assign to the property
-            int ProductNumber = 1;
+            int ProductNumber = 2;
             //assign the data to the property
             AProduct.ProductNo = ProductNumber;
             //test to see that the two values are the same
@@ -49,7 +49,19 @@ namespace Tech_E_UnitTestProject
             //test to see that the two values are the same
             Assert.AreEqual(AProduct.ProductName, AProductName);
         }
-              
+
+        [TestMethod]
+        public void ProductType()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Create some test data to assign to the property
+            string AProductType = "Mouse";
+            //assign the data to the property
+            AProduct.ProductType = AProductType;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.ProductType, AProductType);
+        }
 
         [TestMethod]
         public void ProductDescription()
@@ -113,7 +125,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 ProductNo = 1;            
+            int ProductNo = 2;            
             //invoke the method
             Found = AProduct.Find(ProductNo);
             //test to see that the result is correct            
@@ -131,7 +143,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            int ProductNo = 1;
             //invoke the method
             Found = AProduct.Find(ProductNo);
             //check the product no
@@ -153,7 +165,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            int ProductNo = 15;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the product name
@@ -175,7 +187,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            int ProductNo = 15;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
@@ -197,11 +209,55 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            int ProductNo = 15;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
             if (AProduct.ProductPrice != 11)
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+        
+        [TestMethod]
+        public void TestProductManufacturerFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 15;
+            //invoke the mothod
+            Found = AProduct.Find(ProductNo);
+            //chech the address no
+            if (AProduct.ProductManufacturer != "Dell")
+            {
+                OK = false;
+            }
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestProductsInStockFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductNo = 15;
+            //invoke the mothod
+            Found = AProduct.Find(ProductNo);
+            //chech the address no
+            if (AProduct.ProductsInStock != 11)
             {
                 OK = false;
             }
