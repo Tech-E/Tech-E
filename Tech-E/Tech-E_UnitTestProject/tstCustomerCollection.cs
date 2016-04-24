@@ -47,7 +47,7 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
-        public void CustCustomerListOK()
+        public void CustThisCustomerOK()
         {
             //create an instance of the class that we want to create 
             clsCustomerCollection AllCustomers = new clsCustomerCollection();
