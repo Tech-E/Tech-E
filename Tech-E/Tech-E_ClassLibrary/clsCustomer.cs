@@ -322,6 +322,19 @@ namespace Tech_E_ClassLibrary
                 //set the flag OK to false
                 OK = false;
             }
+
+            //if the Password is blank
+            if (Password.Length < 8)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+
+            if (Password.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
             //return the value Ok
             return OK;
 

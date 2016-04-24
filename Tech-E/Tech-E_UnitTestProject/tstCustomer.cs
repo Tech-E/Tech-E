@@ -1867,7 +1867,7 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
-            String UserName = "aaaaaaaa";
+            String UserName = "a";
             String Password = "password";
             //invoke the mothod
             OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
@@ -1891,7 +1891,7 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
-            String UserName = "aaaaaaaaa";
+            String UserName = "aa";
             String Password = "password";
             //invoke the mothod
             OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
@@ -2015,9 +2015,206 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
-            String UserName = "test123";
+            String UserName = "";
             UserName = UserName.PadRight(500, 'a');
             String Password = "password";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "aaaaaaa";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "aaaaaaaa";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "aaaaaaaaa";
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "";
+            Password = Password.PadRight(49, 'a');
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "";
+            Password = Password.PadRight(50, 'a');
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "";
+            Password = Password.PadRight(25, 'a');
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "";
+            Password = Password.PadRight(51, 'a');
+            //invoke the mothod
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+                                 PostCode, EmailAddress, UserName, Password);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustPasswordExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String FirstName = "Peter";
+            String LastName = "Anderson";
+            String AddressLine1 = "Test Street";
+            String AddressLine2 = "Test";
+            String Town = "Test";
+            String PostCode = "LE3 0QT";
+            String EmailAddress = "test@email.com";
+            String UserName = "test123";
+            String Password = "";
+            Password = Password.PadRight(500, 'a');
             //invoke the mothod
             OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
