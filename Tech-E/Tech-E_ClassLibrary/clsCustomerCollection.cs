@@ -10,5 +10,7 @@ namespace Tech_E_ClassLibrary
         public List<clsCustomer> CustomerList { get; set; }
 
         public clsCustomer ThisCustomer { get; set; }
+
+        public object Count { get; set; }
     }
 }
