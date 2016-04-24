@@ -240,9 +240,15 @@ namespace Tech_E_ClassLibrary
             //if the last name is blank
             if(LastName.Length == 0)
             {
-
+                //set the flag OK to false
+                OK = false;
             }
-            
+            //if the last name is greater than 50 characters
+            if (LastName.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
             //return the value Ok
             return OK;
 
