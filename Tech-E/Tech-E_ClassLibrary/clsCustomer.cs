@@ -249,6 +249,43 @@ namespace Tech_E_ClassLibrary
                 //set the flag OK to false
                 OK = false;
             }
+            //if the last name is blank
+            if (AddressLine1.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is greater than 50 characters
+            if (AddressLine1.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is blank
+            if (AddressLine2.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is greater than 50 characters
+            if (AddressLine2.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is blank
+            if (Town.Length == 0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the last name is greater than 50 characters
+            if (Town.Length > 50)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+           
             //return the value Ok
             return OK;
 
