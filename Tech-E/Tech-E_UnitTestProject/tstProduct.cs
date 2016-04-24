@@ -125,7 +125,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            int ProductNo = 2;            
+            Int32 ProductNo = 2;            
             //invoke the method
             Found = AProduct.Find(ProductNo);
             //test to see that the result is correct            
@@ -143,11 +143,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            int ProductNo = 1;
+            Int32 ProductNo = 2;
             //invoke the method
             Found = AProduct.Find(ProductNo);
             //check the product no
-            if (Convert.ToInt32(AProduct.ProductNo) != 15)
+            if (Convert.ToInt32(AProduct.ProductNo) != 2)
             {
                 OK = false;
             }
@@ -165,11 +165,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            int ProductNo = 15;
+            Int32 ProductNo = 2;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
-            //chech the product name
-            if (AProduct.ProductName != "Test Name")
+            //check the product name
+            if (AProduct.ProductName != "Acer Monitor")
             {
                 OK = false;
             }
@@ -187,8 +187,8 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            int ProductNo = 15;
-            //invoke the mothod
+            Int32 ProductNo = 1;
+            //invoke the method
             Found = AProduct.Find(ProductNo);
             //chech the address no
             if (AProduct.ProductDescription != "Mechanical Keyboard")
@@ -209,11 +209,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            int ProductNo = 15;
+            int ProductNo = 2;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
-            if (AProduct.ProductPrice != 11)
+            if (AProduct.ProductPrice != 99)
             {
                 OK = false;
             }
@@ -231,11 +231,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            Int32 ProductNo = 2;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
-            if (AProduct.ProductManufacturer != "Dell")
+            if (AProduct.ProductManufacturer != "Acer")
             {
                 OK = false;
             }
@@ -253,11 +253,11 @@ namespace Tech_E_UnitTestProject
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductNo = 15;
+            Int32 ProductNo = 1;
             //invoke the mothod
             Found = AProduct.Find(ProductNo);
             //chech the address no
-            if (AProduct.ProductsInStock != 11)
+            if (AProduct.ProductsInStock != 8)
             {
                 OK = false;
             }
@@ -266,6 +266,733 @@ namespace Tech_E_UnitTestProject
         }
 
         [TestMethod]
+        public void ProductValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz Keyboard";
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the method
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        //PRODUCTNAME MIN/MAX TESTING ETC
+        //PRODUCTNAME MIN/MAX TESTING ETC
+
+        [TestMethod]
+        public void ProductNameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMin()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "A";
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMinPlus()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "Aa";
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            ProductName = ProductName.PadRight(49, 'a');
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            ProductName = ProductName.PadRight(50, 'a');
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMid()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            ProductName = ProductName.PadRight(25, 'a');
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            ProductName = ProductName.PadRight(51, 'a');
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductNameExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            ProductName = ProductName.PadRight(500, 'a');
+            String ProductType = "Keyboard";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+
+        //PRODUCTTYPE MIN/MAX TESTING ETC
+        //PRODUCTTYPE MIN/MAX TESTING ETC
+
+        [TestMethod]
+        public void ProductTypeMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMin()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz Keyboard";
+            String ProductType = "K";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMinPlus()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "Aa";
+            String ProductType = "K";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";            
+            String ProductType = "";
+            ProductType = ProductType.PadRight(49, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(50, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMid()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";            
+            String ProductType = "Keyboard";
+            ProductType = ProductType.PadRight(25, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(51, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductTypeExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(500, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        //PRODUCTDESCRIPTION MIN/MAX TESTING ETC
+        //PRODUCTDESCRIPTION MIN/MAX TESTING ETC
+
+        [TestMethod]
+        public void ProductDescriptionMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            String ProductDescription = "";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptioneMin()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz Keyboard";
+            String ProductType = "K";
+            String ProductDescription = "M";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionMinPlus()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "Aa";
+            String ProductType = "K";
+            String ProductDescription = "Me";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "Keyboard";            
+            String ProductDescription = "";
+            ProductDescription = ProductDescription.PadRight(299, 'm');
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "Keyboard";            
+            String ProductDescription = "";
+            ProductDescription = ProductDescription.PadRight(300, 'm');
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionMid()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "Keyboard";            
+            String ProductDescription = "";
+            ProductDescription = ProductDescription.PadRight(25, 'k');
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";            
+            String ProductDescription = "";
+            ProductDescription = ProductDescription.PadRight(51, 'k');
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";            
+            String ProductDescription = "";
+            ProductDescription = ProductDescription.PadRight(500, 'k');
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        //PRODUCTTYPE MIN/MAX TESTING ETC
+        //PRODUCTTYPE MIN/MAX TESTING ETC
+
+        [TestMethod]
+        public void ProductPriceMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = -1;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMin()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz Keyboard";
+            String ProductType = "K";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 1;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMinPlus()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "Aa";
+            String ProductType = "K";
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 2;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(49, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 66666;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(50, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMid()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "AJazz";
+            String ProductType = "Keyboard";
+            ProductType = ProductType.PadRight(25, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(51, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //Boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to use with the method
+            String ProductName = "";
+            String ProductType = "";
+            ProductType = ProductType.PadRight(500, 'k');
+            String ProductDescription = "Mechanical Keyboard";
+            Decimal ProductPrice = 6;
+            String ProductManufacturer = "AJazz";
+            Int32 ProductsInStock = 8;
+            //invoke the mothod
+            OK = AProduct.Valid(ProductName, ProductType, ProductDescription, ProductPrice, ProductManufacturer,
+                                 ProductsInStock);
+            //test to see if the result is correct
+            Assert.IsFalse(OK);
+        }
+
+
+        /*[TestMethod]
         public void ProductNoExtremeMin()
         {
             clsProduct TestProductNo = new clsProduct();
@@ -367,6 +1094,6 @@ namespace Tech_E_UnitTestProject
             clsProduct TestProductName = new clsProduct();
             Boolean OK = TestProductName.ValidString(null);
             Assert.IsFalse(OK);
-        }
+        }*/
     }
 }

@@ -8,7 +8,7 @@ namespace Tech_E_UnitTestProject
     public class clsProduct
     {
         //private data member for the ProductNo property
-        private int productNo;
+        private Int32 productNo;
         //private data member for the ProductName
         private String productName;
         //private data member for the ProductType
@@ -23,19 +23,7 @@ namespace Tech_E_UnitTestProject
         private String productManufacturer;
         
         public string Product { get; set; }
-
-        public bool Valid(Int32 ProductNo)
-        {
-            if (ProductNo >= 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
+                
         public bool ValidString(string ProductName)
         {
             if (ProductName != null &&
@@ -64,7 +52,7 @@ namespace Tech_E_UnitTestProject
             }
         }
 
-        public int ProductNo
+        public Int32 ProductNo
         {
             get
             {
@@ -147,12 +135,12 @@ namespace Tech_E_UnitTestProject
             }
         }
 
-        public bool FindProduct(int ProductNo)
+        public bool FindProduct(Int32 ProductNo)
         {
             throw new NotImplementedException();
         }
 
-               public bool Find(int ProductNo)
+               public bool Find(Int32 ProductNo)
                {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
@@ -180,6 +168,33 @@ namespace Tech_E_UnitTestProject
                 //return false indicating a probelm
                 return false;
             }
+               }
+
+               public bool Valid(string ProductName, string ProductType, string ProductDescription, decimal ProductPrice, string ProductManufacturer, int ProductsInStock)
+               {
+                   //create a Boolean variable to flag the error
+                   Boolean OK = true;
+                   //if the ProductName is Blank
+                   if (ProductName.Length == 0)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the Productname is greater than 50 characters
+                   if (ProductName.Length > 50)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductType is blank
+                   if (ProductType.Length == 0)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+
+                   //return the value Ok
+                   return OK;
                }
     }     
 }
