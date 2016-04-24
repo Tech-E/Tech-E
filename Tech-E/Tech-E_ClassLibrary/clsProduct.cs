@@ -102,13 +102,14 @@ namespace Tech_E_UnitTestProject
         public decimal ProductPrice
         {
             get
-            {
+            {   
                 return productPrice;
             }
             set
             {
                 productPrice = value;
             }
+            
         }
 
         public string ProductManufacturer
@@ -170,10 +171,32 @@ namespace Tech_E_UnitTestProject
             }
                }
 
+              
                public bool Valid(string ProductName, string ProductType, string ProductDescription, decimal ProductPrice, string ProductManufacturer, int ProductsInStock)
                {
                    //create a Boolean variable to flag the error
                    Boolean OK = true;
+
+                   if (ProductPrice > 50000)
+                   {
+                       OK = false;
+                   }
+
+                   if (ProductPrice == 0)
+                   {
+                       OK = false;
+                   }
+
+                   if (ProductsInStock > 1000)
+                   {
+                       OK = false;
+                   }
+
+                   if (ProductsInStock == 0)
+                   {
+                       OK = false;
+                   }
+
                    //if the ProductName is Blank
                    if (ProductName.Length == 0)
                    {
@@ -192,6 +215,50 @@ namespace Tech_E_UnitTestProject
                        //set the flag OK to false
                        OK = false;
                    }
+                   //if the ProductType is greater than 50 characters
+                   if (ProductType.Length > 50)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductDescription is Blank
+                   if (ProductDescription.Length == 0)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductDescription is greater than 50 characters
+                   if (ProductDescription.Length > 300)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductType is blank
+                   if (ProductType.Length == 0)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductType is greater than 50 characters
+                   if (ProductType.Length > 50)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductManufacturer is Blank
+                   if (ProductManufacturer.Length == 0)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+                   //if the ProductManufacturer is greater than 50 characters
+                   if (ProductManufacturer.Length > 50)
+                   {
+                       //set the flag OK to false
+                       OK = false;
+                   }
+
+                  
 
                    //return the value Ok
                    return OK;
