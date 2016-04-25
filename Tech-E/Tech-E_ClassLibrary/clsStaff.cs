@@ -8,6 +8,7 @@ namespace Tech_E_ClassLibrary
 {
     public class clsStaff
     {
+
         //private datta member for staffid
         private int staffid;
         //private datta member for staffname
@@ -347,7 +348,7 @@ namespace Tech_E_ClassLibrary
             return ErrorMessageg;
         }
 
-        public Boolean Find(Int32 Staffid)
+        public clsStaff Find(Int32 Staffid)
         {
 
             //initialise the DBConnection
@@ -357,20 +358,21 @@ namespace Tech_E_ClassLibrary
             //execute the query
             dBConnection.Execute("sproc_tblStaff_FilterByStaffid");
             //if the record was found
+            clsStaff clstaffs = new clsStaff();
             if (dBConnection.Count == 1)
             {
                 //get the Product No
-                Staffid = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Staffid"]);
-                Staffname = Convert.ToString(dBConnection.DataTable.Rows[0]["Staffname"]);
-                Age = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Age"]);
-                Brief = Convert.ToString(dBConnection.DataTable.Rows[0]["Brief"]);
-                Gender = Convert.ToString(dBConnection.DataTable.Rows[0]["Gender"]);
-                Mobilesphone = Convert.ToString(dBConnection.DataTable.Rows[0]["Mobilesphone"]);
-                Workage = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Workage"]);
-                Position = Convert.ToString(dBConnection.DataTable.Rows[0]["Position"]);
+                clstaffs.Staffid = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Staffid"]);
+                clstaffs.Staffname = Convert.ToString(dBConnection.DataTable.Rows[0]["Staffname"]);
+                clstaffs.Age = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Age"]);
+                clstaffs.Brief = Convert.ToString(dBConnection.DataTable.Rows[0]["Brief"]);
+                clstaffs.Gender = Convert.ToString(dBConnection.DataTable.Rows[0]["Gender"]);
+                clstaffs.Mobilesphone = Convert.ToString(dBConnection.DataTable.Rows[0]["Mobilesphone"]);
+                clstaffs.Workage = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Workage"]);
+                clstaffs.Position = Convert.ToString(dBConnection.DataTable.Rows[0]["Position"]);
             }
             //return success
-            return true;
+            return clstaffs;
 
         }
 

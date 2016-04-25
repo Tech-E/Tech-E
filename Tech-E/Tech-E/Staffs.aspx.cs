@@ -34,6 +34,7 @@ namespace Tech_E
         //add method
         protected void btn3_Click(object sender, EventArgs e)
         {
+            Session["staffid"] = -1;
             Response.Redirect("StaffsAdd.aspx");
         }
 
@@ -48,6 +49,25 @@ namespace Tech_E
                 Session["staffid"] = staffid;
                 //redirext to the delete page
                 Response.Redirect("StaffDeletePage.aspx");
+
+            }
+            else
+            {
+                //displayan error
+                Response.Write("<script type='text/javascript'>alert('Please select a recordtp delete from the list');</script>");
+            }
+        }
+
+        protected void btn4_Click(object sender, EventArgs e)
+        {
+            int staffid;
+            if (ListBox1.SelectedIndex != -1)
+            {
+                //get the primary key 
+                staffid = Convert.ToInt32(ListBox1.SelectedValue);
+                Session["staffid"] = staffid;
+                //redirext to the update page
+                Response.Redirect("StaffsAdd.aspx");
 
             }
             else
