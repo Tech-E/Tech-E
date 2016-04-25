@@ -82,6 +82,7 @@ namespace Tech_E_ClassLibrary
             //connect to the database
             clsDataConnection NewDBProducts = new clsDataConnection();
             //set the paraters for the stored procedure
+            dBConnection.AddParameter("@staffid", ThisStaff.Staffid);
             dBConnection.AddParameter("@Name", ThisStaff.Staffname);
             dBConnection.AddParameter("@Age", ThisStaff.Age);
             dBConnection.AddParameter("@Brief", ThisStaff.Brief);
