@@ -71,7 +71,7 @@ namespace Tech_E_ClassLibrary
             //connect to the database
             clsDataConnection NewDBProducts = new clsDataConnection();
             //set the paraters for the stored procedure
-            NewDBProducts.AddParameter("@Staffid", ThisStaff.Staffid);
+            NewDBProducts.AddParameter("@staffid", ThisStaff.Staffid);
             //exectue the store procedure
             NewDBProducts.Execute("sproc_tblStaff_Delete");
         }
