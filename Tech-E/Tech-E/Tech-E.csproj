@@ -67,10 +67,12 @@
   <ItemGroup>
     <Content Include="AppointmentBackEnd.aspx" />
     <Content Include="Appointments.aspx" />
+    <Content Include="CustomerAddBackEnd.aspx" />
     <Content Include="CustomerBackEnd.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default.html" />
     <Content Include="Products.aspx" />
+    <Content Include="ProductsBackEnd.aspx" />
     <Content Include="StaffDeletePage.aspx" />
     <Content Include="Staffs.aspx" />
     <Content Include="StaffsAdd.aspx" />
@@ -90,6 +92,13 @@
     </Compile>
     <Compile Include="Appointments.aspx.designer.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAddBackEnd.aspx.cs">
+      <DependentUpon>CustomerAddBackEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAddBackEnd.aspx.designer.cs">
+      <DependentUpon>CustomerAddBackEnd.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerBackEnd.aspx.cs">
       <DependentUpon>CustomerBackEnd.aspx</DependentUpon>
@@ -111,6 +120,13 @@
     </Compile>
     <Compile Include="Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsBackEnd.aspx.cs">
+      <DependentUpon>ProductsBackEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsBackEnd.aspx.designer.cs">
+      <DependentUpon>ProductsBackEnd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffDeletePage.aspx.cs">
