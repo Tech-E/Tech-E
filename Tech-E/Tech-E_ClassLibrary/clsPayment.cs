@@ -86,8 +86,11 @@ namespace Tech_E_ClassLibrary
 
             }
         }
-
-        public bool Find(int PaymentNo)
+        public bool FindPayment(Int32 PaymentNo)
+        {
+            throw new NotImplementedException();
+        }
+        public bool Find(Int32 PaymentNo)
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
@@ -102,8 +105,7 @@ namespace Tech_E_ClassLibrary
                 paymentNo = Convert.ToInt32(DB.DataTable.Rows[0]["PaymentNo"]);
                 amount = Convert.ToDecimal(DB.DataTable.Rows[0]["Amount"]);
                 paymentMethod = Convert.ToString(DB.DataTable.Rows[0]["PaymentMethod"]);
-                active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
-                dateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["PaymentNo"]);
+                dateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
                 //return that everthing worked Ok
                 return true;
             }
