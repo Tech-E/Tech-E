@@ -300,10 +300,15 @@ namespace Tech_E_UnitTestProject
             [TestMethod]
             public void FindMethodOK()
             {
+                //create an instance of the paymentmethod
                 clsAppointments AnAppointment = new clsAppointments();
+                //boolean variable to store the result of the validation
                 Boolean Found = false;
+                //create some test data to use with the method
                 Int32 AppointmentID = 2;
+                //invoke the method
                 Found = AnAppointment.Find(AppointmentID);
+                //test to see that the result is correct
                 Assert.IsTrue(Found);
             }                        
 
