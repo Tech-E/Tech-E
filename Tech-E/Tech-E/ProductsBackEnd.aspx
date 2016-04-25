@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:ListBox ID="lstProducts" runat="server" DataSourceID="Products" DataTextField="ProductName" DataValueField="ProductNo" Height="242px" Width="367px"></asp:ListBox>
+        <asp:ListBox ID="lstProducts" runat="server" DataSourceID="Products" DataTextField="ProductName" DataValueField="ProductNo" Height="242px" Width="367px" OnSelectedIndexChanged="lstProducts_SelectedIndexChanged"></asp:ListBox>
         <asp:SqlDataSource ID="Products" runat="server" ConnectionString="<%$ ConnectionStrings:Tech-EConnectionStringNew %>" SelectCommand="SELECT [ProductNo], [ProductName] FROM [tblProduct]"></asp:SqlDataSource>
     
     </div>

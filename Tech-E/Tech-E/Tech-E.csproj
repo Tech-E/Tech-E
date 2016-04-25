@@ -71,6 +71,7 @@
     <Content Include="CustomerBackEnd.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default.html" />
+    <Content Include="ProductAddBackEnd.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="ProductsBackEnd.aspx" />
     <Content Include="StaffDeletePage.aspx" />
@@ -113,6 +114,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAddBackEnd.aspx.cs">
+      <DependentUpon>ProductAddBackEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductAddBackEnd.aspx.designer.cs">
+      <DependentUpon>ProductAddBackEnd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>

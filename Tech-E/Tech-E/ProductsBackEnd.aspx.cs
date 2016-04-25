@@ -18,6 +18,11 @@ namespace Tech_E
         }
         void DisplayProducts()
         {
+            
+        }
+
+        protected void lstProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
             Tech_E_ClassLibrary.clsProductCollection Products = new Tech_E_ClassLibrary.clsProductCollection();
             lstProducts.DataSource = Products.ProductList;
             lstProducts.DataValueField = "ProductNo";
