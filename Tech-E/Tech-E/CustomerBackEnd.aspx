@@ -10,7 +10,8 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:ListBox ID="lstCustomer" runat="server" Height="307px" Width="318px"></asp:ListBox>
+        <asp:ListBox ID="lstCustomer" runat="server" Height="307px" Width="318px" AutoPostBack="True" DataSourceID="CustomerData" DataTextField="CustomerNo" DataValueField="CustomerNo"></asp:ListBox>
+        <asp:SqlDataSource ID="CustomerData" runat="server" ConnectionString="<%$ ConnectionStrings:Tech-EConnectionString %>" SelectCommand="SELECT * FROM [tblCustomer]"></asp:SqlDataSource>
         <br />
         <br />
         <asp:Label ID="lblCustomerNo" runat="server" Text="Please enter a Customer No"></asp:Label>
