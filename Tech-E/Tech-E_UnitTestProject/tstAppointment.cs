@@ -20,7 +20,6 @@ namespace Tech_E_UnitTestProject
             ACustomer.CustomerNo = Number;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.CustomerNo, Number);
-
         }
 
         [TestMethod]
