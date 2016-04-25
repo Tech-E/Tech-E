@@ -95,9 +95,21 @@ namespace Tech_E_ClassLibrary
 
         public int Add()
         {
-            thisCustomer.CustomerNo = 123;
+            clsDataConnection DB = new clsDataConnection();
 
-            return thisCustomer.CustomerNo;
+            DB.AddParameter("@FirstName", thisCustomer.FirstName);
+            DB.AddParameter("@LastName", thisCustomer.FirstName);
+            DB.AddParameter("@AddressLine1", thisCustomer.FirstName);
+            DB.AddParameter("@AddressLine2", thisCustomer.FirstName);
+            DB.AddParameter("@Town", thisCustomer.FirstName);
+            DB.AddParameter("@PostCode", thisCustomer.FirstName);
+            DB.AddParameter("@PhoneNo", thisCustomer.FirstName);
+            DB.AddParameter("@EmailAddress", thisCustomer.FirstName);
+            DB.AddParameter("@UserName", thisCustomer.FirstName);
+            DB.AddParameter("@Password", thisCustomer.FirstName);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblCustomer_Insert");
+
         }
     }
 }
