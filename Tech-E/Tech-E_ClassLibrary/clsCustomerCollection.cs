@@ -27,6 +27,21 @@ namespace Tech_E_ClassLibrary
                 clsCustomer ACustomer = new clsCustomer();
                 //read in the fields from the current record
                 ACustomer.CustomerNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CustomerNo"]);
+                ACustomer.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+                ACustomer.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                ACustomer.AddressLine1 = Convert.ToString(DB.DataTable.Rows[Index]["AddressLine1"]);
+                ACustomer.AddressLine2 = Convert.ToString(DB.DataTable.Rows[Index]["AddressLine2"]);
+                ACustomer.Town = Convert.ToString(DB.DataTable.Rows[Index]["Town"]);
+                ACustomer.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["PostCode"]);
+                ACustomer.EmailAddress = Convert.ToString(DB.DataTable.Rows[Index]["EmailAddress"]);
+                ACustomer.UserName = Convert.ToString(DB.DataTable.Rows[Index]["UserName"]);
+                ACustomer.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
+                ACustomer.PhoneNo = Convert.ToString(DB.DataTable.Rows[Index]["PhoneNo"]);
+                //add the record to the private data member
+                customerList.Add(ACustomer);
+                //point at the next record
+                Index++;
+                
             }
             
         }
