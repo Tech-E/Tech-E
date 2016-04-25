@@ -305,8 +305,7 @@ namespace Tech_E_UnitTestProject
                 Int32 AppointmentID = 2;
                 Found = AnAppointment.Find(AppointmentID);
                 Assert.IsTrue(Found);
-            }
-                        
+            }                        
 
             [TestMethod]
             public void TestAppointmentIDFound()
