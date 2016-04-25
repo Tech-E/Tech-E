@@ -10,13 +10,35 @@ namespace Tech_E
 {
     public partial class StaffsAdd : System.Web.UI.Page
     {
+        int staffid;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            staffid = Convert.ToInt32(Session["staffid"]);
+            if (staffid==-1)
+            {
+                Button1.Text = "Add";
+            }
+            else
+            {
+                Button1.Text = "Update";
+            }
         }
 
         //add method
         protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (staffid == -1)
+            {
+                add();
+            }
+            else
+            {
+                update();
+            }
+        }
+
+        //add method
+        private void add()
         {
             clsStaff staffModel = new clsStaff();
             string ErrorMessage;
@@ -43,5 +65,12 @@ namespace Tech_E
                 Response.Write("<script type='text/javascript'>alert('" + ErrorMessage + "');</script>");
             }
         }
+
+        //update method
+        private void update()
+        {
+
+        }
+
     }
 }
