@@ -31,6 +31,11 @@ namespace Tech_E
             ListBox1.DataBind();
         }
 
+        protected void lstAppointment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
        
 
     }
