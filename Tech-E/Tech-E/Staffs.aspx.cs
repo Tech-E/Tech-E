@@ -25,7 +25,7 @@ namespace Tech_E
             //set data souce
             ListBox1.DataSource = clsstaffcollection.clsStaffListCollection();
             //set tje name of the primary key
-            ListBox1.DataValueField = "Staffid";
+            ListBox1.DataValueField = "staffid";
             ListBox1.DataTextField = "Staffname";
             //bind the data to the list
             ListBox1.DataBind();

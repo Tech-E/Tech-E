@@ -25,22 +25,7 @@ namespace Tech_E
           public  void DisplayProducts()
           {
 
-              /*//create an instance of the county collection
-                clsProductCollection Products = new clsProductCollection();
-    //set the data source to the list of products in the collection
-    lstProducts.DataSource = Products.ProductList;
-    //set the name of the primary key
-    lstProducts.DataValueField = "ProductNo";
-    //set the data field to display
-    lstProducts.DataTextField = "ProductType";
-    //biund the data to the list
-    lstProducts.DataBind();*/
-          }
-                 
-
-          protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-          {
-
+             
           }
     }
 
