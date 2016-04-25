@@ -70,6 +70,7 @@
     <Content Include="Default.html" />
     <Content Include="Products.aspx" />
     <Content Include="Staffs.aspx" />
+    <Content Include="StaffsAdd.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,13 @@
     </Compile>
     <Compile Include="Staffs.aspx.designer.cs">
       <DependentUpon>Staffs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffsAdd.aspx.cs">
+      <DependentUpon>StaffsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffsAdd.aspx.designer.cs">
+      <DependentUpon>StaffsAdd.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
