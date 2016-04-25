@@ -12,7 +12,7 @@ namespace Tech_E_UnitTestProject
         public void InstanceOK()
         {
             //create an instance of the class we want to create
-            clsAppointmentCollection AllProducts = new clsAppointmentCollection();
+            clsAppointmentCollection AllAppointments = new clsAppointmentCollection();
             //test to see that it exists
             Assert.IsNotNull(AllAppointments);
         }
