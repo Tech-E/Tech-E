@@ -20,14 +20,14 @@
 
     </p>
         <p>
-            <asp:Button ID="btn1" runat="server" Text="Apply" Width="171px" OnClick="Button1_Click" />
-&nbsp;<asp:Button ID="btn2" runat="server" Text="Display All" Width="171px" OnClick="Button2_Click" />
+            <asp:Button ID="btn1" runat="server" Text="Apply" Width="171px"  />
+&nbsp;<asp:Button ID="btn2" runat="server" Text="Display All" Width="171px"  />
 
     </p>
         <p>
-            <asp:Button ID="btn3" runat="server" Text="Add" OnClick="Button3_Click" />
-&nbsp;<asp:Button ID="btn4" runat="server" Text="Edit" OnClick="Button4_Click" />
-&nbsp;<asp:Button ID="btn5" runat="server" Text="Delete" OnClick="Button5_Click" />
+            <asp:Button ID="btn3" runat="server" Text="Add"  />
+&nbsp;<asp:Button ID="btn4" runat="server" Text="Edit" />
+&nbsp;<asp:Button ID="btn5" runat="server" Text="Delete"  />
 
     </p>
     </form>
