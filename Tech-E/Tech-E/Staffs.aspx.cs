@@ -47,7 +47,7 @@ namespace Tech_E
                 staffid = Convert.ToInt32(ListBox1.SelectedValue);
                 Session["staffid"] = staffid;
                 //redirext to the delete page
-
+                Response.Redirect("StaffDeletePage.aspx");
 
             }
             else

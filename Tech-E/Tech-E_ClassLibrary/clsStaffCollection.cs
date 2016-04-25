@@ -65,13 +65,13 @@ namespace Tech_E_ClassLibrary
 
         }
 
-        public void Delete()
+        public void Delete(int Staffid)
         {
             //deletes the recoed point ti by this staff
             //connect to the database
             clsDataConnection NewDBProducts = new clsDataConnection();
             //set the paraters for the stored procedure
-            NewDBProducts.AddParameter("@staffid", ThisStaff.Staffid);
+            NewDBProducts.AddParameter("@staffid", Staffid);
             //exectue the store procedure
             NewDBProducts.Execute("sproc_tblStaff_Delete");
         }
