@@ -17,7 +17,7 @@ namespace Tech_E_ClassLibrary
             //object for the data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
-            DB.Execute("sproc_tblCustomer_SelectAll")
+            DB.Execute("sproc_tblCustomer_SelectAll");
             
         }
 
