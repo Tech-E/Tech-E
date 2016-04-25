@@ -69,7 +69,6 @@ namespace Tech_E_ClassLibrary
                 productList.Add(AProduct);
             //    //point at the next record
                 Index++;
-
             }
         }
 
