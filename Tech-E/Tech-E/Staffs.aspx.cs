@@ -31,6 +31,11 @@ namespace Tech_E
             ListBox1.DataBind();
         }
 
+        protected void btn3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffsAdd.aspx");
+        }
+
        
 
     }
