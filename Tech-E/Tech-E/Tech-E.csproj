@@ -70,6 +70,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Default.html" />
     <Content Include="Products.aspx" />
+    <Content Include="StaffDeletePage.aspx" />
     <Content Include="Staffs.aspx" />
     <Content Include="StaffsAdd.aspx" />
     <Content Include="Web.config" />
@@ -104,6 +105,13 @@
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDeletePage.aspx.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffDeletePage.aspx.designer.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Staffs.aspx.cs">
       <DependentUpon>Staffs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

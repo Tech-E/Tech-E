@@ -27,7 +27,7 @@
         <p>
             <asp:Button ID="btn3" runat="server" Text="Add" OnClick="btn3_Click"  />
 &nbsp;<asp:Button ID="btn4" runat="server" Text="Edit" />
-&nbsp;<asp:Button ID="btn5" runat="server" Text="Delete"  />
+&nbsp;<asp:Button ID="btn5" runat="server" Text="Delete" OnClick="btn5_Click"  />
 
     </p>
     </form>
