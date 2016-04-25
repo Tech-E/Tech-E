@@ -221,7 +221,7 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public bool Valid(string FirstName, string LastName, string AddressLine1, string AddressLine2, string Town, string PostCode, string EmailAddress, string UserName, string Password)
+        public bool Valid(string FirstName, string LastName, string AddressLine1, string AddressLine2, string Town, string PostCode, string PhoneNo, string EmailAddress, string UserName, string Password)
         {
             //create a Boolean variable to flag the error
             Boolean OK = true;
