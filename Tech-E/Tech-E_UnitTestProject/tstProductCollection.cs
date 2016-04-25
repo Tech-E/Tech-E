@@ -44,7 +44,7 @@ namespace Tech_E_UnitTestProject
             Assert.AreEqual(AllProducts.ProductList, TestList);
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void CountProductOK()
         {
             //create an instance of the class that we want to create 
@@ -55,7 +55,7 @@ namespace Tech_E_UnitTestProject
             AllProducts.Count = SomeCount;
             //test to see that the two values are the same
             Assert.AreEqual(AllProducts.Count, SomeCount);
-        }
+        }*/
 
         [TestMethod]
         public void ThisProductPropertyOK()
@@ -103,6 +103,15 @@ namespace Tech_E_UnitTestProject
             //test to see that the two values are the same
             Assert.AreEqual(AllProducts.Count, TestList.Count);
         }
+
+        /*[TestMethod]
+        public void TwoRecordsPresent()
+        {
+            //create an instance of the class we want to create
+            clsProductCollection AllProducts = new clsProductCollection();
+            //test to see that the two values are the same
+            Assert.AreEqual(AllProducts.Count, 2);
+        }*/
 
     }
 }
