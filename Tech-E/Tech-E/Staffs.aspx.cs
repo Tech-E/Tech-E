@@ -31,9 +31,9 @@ namespace Tech_E
             ListBox1.DataBind();
         }
 
-        protected void lstAppointment_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btn3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("StaffsAdd.aspx");
         }
 
        

@@ -24,9 +24,9 @@ namespace Tech_E
 
             lstCustomer.DataSource = Customers.CustomerList;
 
-            lstCustomer.DataValueField = "AddressNo";
+            lstCustomer.DataValueField = "CustomerNo";
 
-            lstCustomer.DataTextField = "FirstName";
+            lstCustomer.DataTextField = "UserName";
 
             lstCustomer.DataBind();
 

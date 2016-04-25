@@ -47,7 +47,7 @@
             &nbsp;YEAR<br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button1" runat="server" Text="Add" Width="74px"/>
+            <asp:Button ID="Button1" runat="server" Text="Add" Width="74px" OnClick="Button1_Click"/>
             <asp:Button ID="Button2" runat="server" Text="Cancel" Width="74px" />
             <br />
         </div>

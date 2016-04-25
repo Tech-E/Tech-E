@@ -8,7 +8,6 @@ namespace Tech_E_ClassLibrary
 {
     public class clsStaff
     {
-
         //private datta member for staffid
         private int staffid;
         //private datta member for staffname
@@ -40,6 +39,7 @@ namespace Tech_E_ClassLibrary
                 staffid = value;
             }
         }
+
 
         //public property for staffname
         public string Staffname
@@ -293,6 +293,59 @@ namespace Tech_E_ClassLibrary
             return OK;
         }
 
+        public string StaffValid(string staffname, string age, string brief, string mobilesphone, string workage)
+        {
+            string ErrorMessageg;
+            ErrorMessageg = "";
+            int temp;
+
+
+            if (staffname.Length < 1 | staffname.Length > 20)
+            {
+                //record an error
+                ErrorMessageg = ErrorMessageg + "The Staff Name Must be Between 1 and 20 characters.\\n";
+            }
+
+            //wether is number
+            try
+            {
+                temp = Convert.ToInt32(age);
+            }
+            catch//if it failed report an error
+            {
+                //set the error messsage
+                ErrorMessageg = ErrorMessageg + "age No be a number. \\n";
+            }
+
+
+            //check brief
+            if (brief.Length < 10)
+            {
+                //set the error messsage
+                ErrorMessageg = ErrorMessageg + "brief must be less than 10 characters.\\n ";
+            }
+
+            //check mobilesphone
+            if (mobilesphone.Length == 0)
+            {
+                //set the error messsage
+                ErrorMessageg = ErrorMessageg + "mobilesphone cannot is null. \\n";
+            }
+
+            //wether is number about workage
+            try
+            {
+                temp = Convert.ToInt32(workage);
+            }
+            catch//if it failed report an error
+            {
+                //set the error messsage
+                ErrorMessageg = ErrorMessageg + "workage No be a number.\\n ";
+            }
+
+
+            return ErrorMessageg;
+        }
 
         public Boolean Find(Int32 Staffid)
         {

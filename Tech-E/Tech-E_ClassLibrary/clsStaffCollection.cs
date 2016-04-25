@@ -48,13 +48,30 @@ namespace Tech_E_ClassLibrary
         }
 
 
+        //Add Stafff Information
+        public int AddStaff(clsStaff staffModel)
+        {
+            dBConnection = new clsDataConnection();
+            //execute 
+            dBConnection.AddParameter("@Name", staffModel.Staffname);
+            dBConnection.AddParameter("@Age", staffModel.Age);
+            dBConnection.AddParameter("@Brief", staffModel.Brief);
+            dBConnection.AddParameter("@Gender", staffModel.Gender);
+            dBConnection.AddParameter("@Mobilesphone", staffModel.Mobilesphone);
+            dBConnection.AddParameter("@workage", staffModel.Workage);
+            dBConnection.AddParameter("@positiob", staffModel.Position);
+
+            return dBConnection.Execute("sproc_Staff_Insert");
+
+        }
+
         public void Delete()
         {
             //deletes the recoed point ti by this staff
             //connect to the database
             clsDataConnection NewDBProducts = new clsDataConnection();
             //set the paraters for the stored procedure
-            NewDBProducts.AddParameter("@Staffid", ThisStaff.Staffid);
+            NewDBProducts.AddParameter("@staffid", ThisStaff.Staffid);
             //exectue the store procedure
             NewDBProducts.Execute("sproc_tblStaff_Delete");
         }
