@@ -10,6 +10,7 @@ namespace Tech_E_ClassLibrary
          
         //private data member for the list
         List<clsCustomer> customerList = new List<clsCustomer>();
+        clsCustomer thisCustomer = new clsCustomer();
 
 
         public List<clsCustomer> CustomerList 
@@ -26,7 +27,19 @@ namespace Tech_E_ClassLibrary
             }
         }
 
-        public clsCustomer ThisCustomer { get; set; }
+        public clsCustomer ThisCustomer 
+        { 
+            get
+            {
+                //return the private data
+                return thisCustomer;
+            }
+            set
+            {
+                //set the private data member
+                thisCustomer = value;
+            }
+        }
 
         public int Count 
         { 
@@ -79,6 +92,13 @@ namespace Tech_E_ClassLibrary
         }
 
 
+
+        public int Add()
+        {
+            thisCustomer.CustomerNo = 123;
+
+            return thisCustomer.CustomerNo;
+        }
     }
 }
 
