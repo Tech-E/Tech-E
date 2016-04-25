@@ -16,7 +16,7 @@ namespace Tech_E
             if (IsPostBack == false)
             {
                 //update the list box
-                Display
+                
             }
         }
     }
