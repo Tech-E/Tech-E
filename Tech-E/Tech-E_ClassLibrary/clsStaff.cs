@@ -8,6 +8,7 @@ namespace Tech_E_ClassLibrary
 {
     public class clsStaff
     {
+
         //private datta member for staffid
         private int staffid;
         //private datta member for staffname
