@@ -15,8 +15,7 @@ namespace Tech_E
             //if this is the first time the page is displayed
             if (IsPostBack == false)
             {
-                //update the list box
-                Display
+                
             }
         }
     }
