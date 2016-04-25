@@ -511,7 +511,7 @@ namespace Tech_E_UnitTestProject
             string Amount = "69.99";
             string PaymentMethod = "Debit Card";
             //set data added to a non value
-            string DateAdded = "";
+            string DateAdded = "19/07/4000";
             //invoke the method
             OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
             //test to see that result is correct
