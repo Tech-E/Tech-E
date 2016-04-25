@@ -37,6 +37,7 @@ namespace Tech_E
             }
         }
 
+
         //add method
         private void add()
         {
@@ -69,7 +70,14 @@ namespace Tech_E
         //update method
         private void update()
         {
-
+            clsStaff clstaffs = new clsStaff();
+            clstaffs = clstaffs.Find(staffid);
+            TextBox2.Text = clstaffs.Staffname.ToString();
+            TextBox3.Text = clstaffs.Age.ToString();
+            TextBox4.Text = clstaffs.Brief.ToString();
+            TextBox6.Text = clstaffs.Mobilesphone.ToString();
+            TextBox8.Text = clstaffs.Workage.ToString();
+            DropDownList1.Text = clstaffs.Position.ToString();
         }
 
     }
