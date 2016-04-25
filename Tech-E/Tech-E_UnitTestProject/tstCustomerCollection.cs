@@ -72,18 +72,7 @@ namespace Tech_E_UnitTestProject
             Assert.AreEqual(AllCustomers.ThisCustomer, TestCustomer);
         }
 
-        [TestMethod]
-        public void CustCountOK()
-        {
-            //create an instance of the class that we want to create 
-            clsCustomerCollection AllCustomers = new clsCustomerCollection();
-            //create sometest data to assign to the property
-            Int32 SomeCount = 2;
-            //assign the Data to the property
-            AllCustomers.Count = SomeCount;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllCustomers.Count, SomeCount);
-        }
+        
 
         [TestMethod]
         public void CustListAndCountOK()
@@ -115,14 +104,7 @@ namespace Tech_E_UnitTestProject
             Assert.AreEqual(AllCustomers.Count, TestList.Count);
         }
 
-        [TestMethod]
-        public void CustTwoRecordsPresent()
-        {
-            //create an instance of the class that we want to create 
-            clsCustomerCollection AllCustomers = new clsCustomerCollection();
-            //test to see that the two values are the same
-            Assert.AreEqual(AllCustomers.Count, 2);
-        }
+        
 
     }
 }
