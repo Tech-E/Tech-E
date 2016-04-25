@@ -295,7 +295,32 @@ namespace Tech_E_ClassLibrary
         }
 
 
+        public Boolean Find(Int32 Staffid)
+        {
 
+            //initialise the DBConnection
+            clsDataConnection dBConnection = new clsDataConnection();
+            //add the Product No parameter
+            dBConnection.AddParameter("@Staffid", Staffid);
+            //execute the query
+            dBConnection.Execute("sproc_tblStaff_FilterByStaffid");
+            //if the record was found
+            if (dBConnection.Count == 1)
+            {
+                //get the Product No
+                Staffid = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Staffid"]);
+                Staffname = Convert.ToString(dBConnection.DataTable.Rows[0]["Staffname"]);
+                Age = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Age"]);
+                Brief = Convert.ToString(dBConnection.DataTable.Rows[0]["Brief"]);
+                Gender = Convert.ToString(dBConnection.DataTable.Rows[0]["Gender"]);
+                Mobilesphone = Convert.ToString(dBConnection.DataTable.Rows[0]["Mobilesphone"]);
+                Workage = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Workage"]);
+                Position = Convert.ToString(dBConnection.DataTable.Rows[0]["Position"]);
+            }
+            //return success
+            return true;
+
+        }
 
     }
 
