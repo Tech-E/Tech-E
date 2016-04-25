@@ -65,6 +65,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Appointments.aspx" />
     <Content Include="CustomerBackEnd.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default.html" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments.aspx.cs">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointments.aspx.designer.cs">
+      <DependentUpon>Appointments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerBackEnd.aspx.cs">
       <DependentUpon>CustomerBackEnd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
