@@ -444,11 +444,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test Town";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
             OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town, 
-                                 PostCode,EmailAddress,UserName,Password);
+                                 PostCode,PhoneNo, EmailAddress,UserName,Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
         }
@@ -468,11 +469,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
             OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
-                                 PostCode, EmailAddress, UserName, Password);
+                                 PostCode, PhoneNo, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
         }
@@ -492,10 +494,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, PhoneNo, AddressLine1, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -516,10 +519,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -541,10 +545,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -566,10 +571,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -591,10 +597,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -616,10 +623,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -641,10 +649,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -665,10 +674,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -689,10 +699,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -713,10 +724,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -738,10 +750,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -763,10 +776,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -788,10 +802,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -813,10 +828,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -838,10 +854,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -862,10 +879,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -886,10 +904,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -910,10 +929,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -935,10 +955,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -960,10 +981,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -985,10 +1007,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1010,10 +1033,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1035,10 +1059,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1058,11 +1083,12 @@ namespace Tech_E_UnitTestProject
             String AddressLine2 = "";
             String Town = "Test";
             String PostCode = "LE3 0QT";
+            String PhoneNo = "07123123123";
             String EmailAddress = "test@email.com";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1083,10 +1109,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1107,10 +1134,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1132,10 +1160,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1157,10 +1186,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1182,10 +1212,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1207,10 +1238,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1232,10 +1264,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1256,10 +1289,11 @@ namespace Tech_E_UnitTestProject
             String Town = "";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1280,10 +1314,11 @@ namespace Tech_E_UnitTestProject
             String Town = "a";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1304,10 +1339,11 @@ namespace Tech_E_UnitTestProject
             String Town = "aa";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1329,10 +1365,11 @@ namespace Tech_E_UnitTestProject
             Town = Town.PadRight(49, 'a');
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1354,10 +1391,11 @@ namespace Tech_E_UnitTestProject
             Town = Town.PadRight(50, 'a');
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1379,10 +1417,11 @@ namespace Tech_E_UnitTestProject
             Town = Town.PadRight(25, 'a');
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1404,10 +1443,11 @@ namespace Tech_E_UnitTestProject
             Town = Town.PadRight(51, 'a');
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1429,10 +1469,11 @@ namespace Tech_E_UnitTestProject
             Town = Town.PadRight(500, 'a');
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1453,10 +1494,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1477,10 +1519,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "a";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1501,10 +1544,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "aa";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1525,10 +1569,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "aaaaaaaa";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1549,10 +1594,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "aaaaaaaaa";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1573,10 +1619,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "aaaaa";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1597,10 +1644,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "aaaaaaaaaa";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1622,10 +1670,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "";
             PostCode = PostCode.PadRight(500, 'a');
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1645,11 +1694,12 @@ namespace Tech_E_UnitTestProject
             String AddressLine2 = "Test";
             String Town = "Test";
             String PostCode = "LE3 0QT";
+            String PhoneNo = "07123123123";
             String EmailAddress = "";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1671,9 +1721,10 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "a";
             String UserName = "test123";
+            String PhoneNo = "07123123123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1694,10 +1745,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "aa";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1719,10 +1771,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(49, 'a');
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1742,12 +1795,13 @@ namespace Tech_E_UnitTestProject
             String AddressLine2 = "Test";
             String Town = "Test";
             String PostCode = "LE3 0QT";
+            String PhoneNo = "07123123123";
             String EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(50, 'a');
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1769,10 +1823,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(25, 'a');
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1794,10 +1849,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(51, 'a');
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1819,10 +1875,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(500, 'a');
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1843,10 +1900,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -1867,10 +1925,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "a";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1891,10 +1950,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "aa";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1917,9 +1977,10 @@ namespace Tech_E_UnitTestProject
             String EmailAddress = "test@email.com";
             String UserName = "";
             UserName = UserName.PadRight(49, 'a');
+            String PhoneNo = "07123123123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1940,11 +2001,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "";
             UserName = UserName.PadRight(50, 'a');
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1967,9 +2029,10 @@ namespace Tech_E_UnitTestProject
             String EmailAddress = "test@email.com";
             String UserName = "";
             UserName = UserName.PadRight(25, 'a');
+            String PhoneNo = "07123123123";
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -1990,11 +2053,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "";
             UserName = UserName.PadRight(51, 'a');
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -2015,11 +2079,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "";
             UserName = UserName.PadRight(500, 'a');
             String Password = "password";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -2039,11 +2104,12 @@ namespace Tech_E_UnitTestProject
             String AddressLine2 = "Test";
             String Town = "Test";
             String PostCode = "LE3 0QT";
+            String PhoneNo = "07123123123";
             String EmailAddress = "test@email.com";
             String UserName = "test123";
             String Password = "aaaaaaa";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -2063,11 +2129,12 @@ namespace Tech_E_UnitTestProject
             String AddressLine2 = "Test";
             String Town = "Test";
             String PostCode = "LE3 0QT";
+            String PhoneNo = "07123123123";
             String EmailAddress = "test@email.com";
             String UserName = "test123";
             String Password = "aaaaaaaa";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -2088,10 +2155,11 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "aaaaaaaaa";
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -2112,11 +2180,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "";
             Password = Password.PadRight(49, 'a');
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -2137,11 +2206,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "";
             Password = Password.PadRight(50, 'a');
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -2163,10 +2233,11 @@ namespace Tech_E_UnitTestProject
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
             String UserName = "test123";
+            String PhoneNo = "07123123123";
             String Password = "";
             Password = Password.PadRight(25, 'a');
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsTrue(OK);
@@ -2187,11 +2258,12 @@ namespace Tech_E_UnitTestProject
             String Town = "Test";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
+            String PhoneNo = "07123123123";
             String UserName = "test123";
             String Password = "";
             Password = Password.PadRight(51, 'a');
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);
@@ -2210,13 +2282,14 @@ namespace Tech_E_UnitTestProject
             String AddressLine1 = "Test Street";
             String AddressLine2 = "Test";
             String Town = "Test";
+            String PhoneNo = "07123123123";
             String PostCode = "LE3 0QT";
             String EmailAddress = "test@email.com";
             String UserName = "test123";
             String Password = "";
             Password = Password.PadRight(500, 'a');
             //invoke the mothod
-            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, AddressLine2, Town,
+            OK = ACustomer.Valid(FirstName, LastName, AddressLine1, PhoneNo, AddressLine2, Town,
                                  PostCode, EmailAddress, UserName, Password);
             //test to see if the result is correct
             Assert.IsFalse(OK);

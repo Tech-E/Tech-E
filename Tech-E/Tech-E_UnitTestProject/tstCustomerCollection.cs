@@ -93,9 +93,10 @@ namespace Tech_E_UnitTestProject
             TestItem.Town = "Test";
             TestItem.PostCode = "LE3 0QT";
             TestItem.EmailAddress = "test@email.com";
+            TestItem.PhoneNo = "07123123123";
             TestItem.UserName = "test123";
             TestItem.Password = "password";
-            TestItem.PhoneNo = "07123123123";
+            
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property

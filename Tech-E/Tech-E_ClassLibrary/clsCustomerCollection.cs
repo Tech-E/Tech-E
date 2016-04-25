@@ -98,15 +98,15 @@ namespace Tech_E_ClassLibrary
             clsDataConnection DB = new clsDataConnection();
 
             DB.AddParameter("@FirstName", thisCustomer.FirstName);
-            DB.AddParameter("@LastName", thisCustomer.FirstName);
-            DB.AddParameter("@AddressLine1", thisCustomer.FirstName);
-            DB.AddParameter("@AddressLine2", thisCustomer.FirstName);
-            DB.AddParameter("@Town", thisCustomer.FirstName);
-            DB.AddParameter("@PostCode", thisCustomer.FirstName);
-            DB.AddParameter("@PhoneNo", thisCustomer.FirstName);
-            DB.AddParameter("@EmailAddress", thisCustomer.FirstName);
-            DB.AddParameter("@UserName", thisCustomer.FirstName);
-            DB.AddParameter("@Password", thisCustomer.FirstName);
+            DB.AddParameter("@LastName", thisCustomer.LastName);
+            DB.AddParameter("@AddressLine1", thisCustomer.AddressLine1);
+            DB.AddParameter("@AddressLine2", thisCustomer.AddressLine2);
+            DB.AddParameter("@Town", thisCustomer.Town);
+            DB.AddParameter("@PostCode", thisCustomer.PostCode);
+            DB.AddParameter("@PhoneNo", thisCustomer.PhoneNo);
+            DB.AddParameter("@EmailAddress", thisCustomer.EmailAddress);
+            DB.AddParameter("@UserName", thisCustomer.UserName);
+            DB.AddParameter("@Password", thisCustomer.Password);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblCustomer_Insert");
 
