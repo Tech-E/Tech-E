@@ -38,6 +38,7 @@ namespace Tech_E_UnitTestProject
             TestItem.EmailAddress = "test@email.com";
             TestItem.UserName = "test123";
             TestItem.Password = "password";
+            TestItem.PhoneNo = "07123123123";
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -64,6 +65,7 @@ namespace Tech_E_UnitTestProject
             TestCustomer.EmailAddress = "test@email.com";
             TestCustomer.UserName = "test123";
             TestCustomer.Password = "password";
+            TestCustomer.PhoneNo = "07123123123";
             //assign the data to the property
             AllCustomers.ThisCustomer = TestCustomer;
             //test to see that the two values are the same
@@ -104,6 +106,7 @@ namespace Tech_E_UnitTestProject
             TestItem.EmailAddress = "test@email.com";
             TestItem.UserName = "test123";
             TestItem.Password = "password";
+            TestItem.PhoneNo = "07123123123";
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property

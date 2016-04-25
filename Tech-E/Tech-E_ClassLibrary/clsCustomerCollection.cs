@@ -9,38 +9,40 @@ namespace Tech_E_ClassLibrary
     {
 
         public clsCustomerCollection()
+        {
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount = 0;
+            //object for the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomer_SelectAll");
+            //get the count of records
+            RecordCount = DB.Count;
+            //while there are records to proccess
+            while (Index < RecordCount)
             {
-            
-            //create the item of test data
-            clsCustomer TestItem = new clsCustomer();
-            //set its properties
-            TestItem.CustomerNo = 1;
-            TestItem.FirstName = "Peter";
-            TestItem.LastName = "Anderson";
-            TestItem.AddressLine1 = "Test Street";
-            TestItem.AddressLine2 = "Test";
-            TestItem.Town = "Test";
-            TestItem.PostCode = "LE3 0QT";
-            TestItem.EmailAddress = "test@email.com";
-            TestItem.UserName = "test123";
-            TestItem.Password = "password";
-            //add the item to the test list
-            customerList.Add(TestItem);
-            //re initialise the object for some new data
-            TestItem = new clsCustomer();
-            //set the properties
-            TestItem.CustomerNo = 2;
-            TestItem.FirstName = "Grizz";
-            TestItem.LastName = "Tempz";
-            TestItem.AddressLine1 = "Test Street";
-            TestItem.AddressLine2 = "Test";
-            TestItem.Town = "Test";
-            TestItem.PostCode = "LE3 0QT";
-            TestItem.EmailAddress = "Baa@Grizz.com";
-            TestItem.UserName = "Propa123";
-            TestItem.Password = "password";
-            //add the item to the test list
-            CustomerList.Add(TestItem);
+                //create a blank customer
+                clsCustomer ACustomer = new clsCustomer();
+                //read in the fields from the current record
+                ACustomer.CustomerNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CustomerNo"]);
+                ACustomer.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+                ACustomer.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                ACustomer.AddressLine1 = Convert.ToString(DB.DataTable.Rows[Index]["AddressLine1"]);
+                ACustomer.AddressLine2 = Convert.ToString(DB.DataTable.Rows[Index]["AddressLine2"]);
+                ACustomer.Town = Convert.ToString(DB.DataTable.Rows[Index]["Town"]);
+                ACustomer.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["PostCode"]);
+                ACustomer.EmailAddress = Convert.ToString(DB.DataTable.Rows[Index]["EmailAddress"]);
+                ACustomer.UserName = Convert.ToString(DB.DataTable.Rows[Index]["UserName"]);
+                ACustomer.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
+                ACustomer.PhoneNo = Convert.ToString(DB.DataTable.Rows[Index]["PhoneNo"]);
+                //add the record to the private data member
+                customerList.Add(ACustomer);
+                //point at the next record
+                Index++;
+                
+            }
             
         }
 
