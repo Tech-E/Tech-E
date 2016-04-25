@@ -73,8 +73,7 @@ namespace Tech_E_ClassLibrary
         }
 
             public Tech_E_UnitTestProject.clsProduct ThisProduct { get; set; }
-
-            
+                        
         }
     }
 
