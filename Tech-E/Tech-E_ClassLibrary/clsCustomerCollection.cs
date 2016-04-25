@@ -7,10 +7,36 @@ namespace Tech_E_ClassLibrary
 {
     public class clsCustomerCollection
     {
-        public List<clsCustomer> CustomerList { get; set; }
+        //private data member for the list
+        List<clsCustomer> customerList = new List<clsCustomer>();
+
+        public List<clsCustomer> CustomerList 
+        { 
+            get
+            {
+                //return the private data
+                return customerList;
+            } 
+            set
+            {
+                //set the private data
+                customerList = value;
+            }
+        }
 
         public clsCustomer ThisCustomer { get; set; }
 
-        public object Count { get; set; }
+        public int Count 
+        { 
+            get
+            {
+                //return the count of the list
+                return customerList.Count;
+            }
+            set
+            {
+                //we shall worry about this later
+            }
+        }
     }
 }
