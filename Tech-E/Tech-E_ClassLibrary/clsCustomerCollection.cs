@@ -58,7 +58,7 @@ namespace Tech_E_ClassLibrary
             {
                 //create a blank customer
                 clsCustomer ACustomer = new clsCustomer();
-            //    //read in the fields from the current record
+                //read in the fields from the current record
                 ACustomer.CustomerNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CustomerNo"]);
                 ACustomer.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
                 ACustomer.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
@@ -70,9 +70,9 @@ namespace Tech_E_ClassLibrary
                 ACustomer.UserName = Convert.ToString(DB.DataTable.Rows[Index]["UserName"]);
                 ACustomer.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
                 ACustomer.PhoneNo = Convert.ToString(DB.DataTable.Rows[Index]["PhoneNo"]);
-            //    //add the record to the private data member
+                //add the record to the private data member
                 customerList.Add(ACustomer);
-            //    //point at the next record
+                //point at the next record
                 Index++;
 
             }
