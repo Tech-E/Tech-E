@@ -65,12 +65,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomerBackEnd.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Default.html" />
     <Content Include="Products.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerBackEnd.aspx.cs">
+      <DependentUpon>CustomerBackEnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerBackEnd.aspx.designer.cs">
+      <DependentUpon>CustomerBackEnd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
