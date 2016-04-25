@@ -23,12 +23,12 @@ namespace Tech_E
             //create an instane of the collection
             clsStaffCollection clsstaffcollection = new clsStaffCollection();
             //set data souce
-            ListBox1.DataSource = clsstaffcollection.clsStaffListCollection();
-            //set tje name of the primary key
-            ListBox1.DataValueField = "staffid";
-            ListBox1.DataTextField = "Staffname";
-            //bind the data to the list
-            ListBox1.DataBind();
+            //ListBox1.DataSource = clsstaffcollection.clsStaffListCollection();
+            ////set tje name of the primary key
+            //ListBox1.DataValueField = "staffid";
+            //ListBox1.DataTextField = "Staffname";
+            ////bind the data to the list
+            //ListBox1.DataBind();
         }
 
     }
