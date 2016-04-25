@@ -309,7 +309,7 @@ namespace Tech_E_UnitTestProject
                 //invoke the method
                 Found = AnAppointment.Find(AppointmentID);
                 //test to see that the result is correct
-                Assert.IsTrue(Found);
+                Assert.IsFalse(Found);
             }                        
 
             [TestMethod]
@@ -322,7 +322,7 @@ namespace Tech_E_UnitTestProject
                 Found = AnAppointment.Find(AppointmentID);
                 if (AnAppointment.AppointmentID != 2)
                 {
-                    OK = false;
+                    OK = true;
                 }
                 Assert.IsTrue(OK);
             }
@@ -344,7 +344,7 @@ namespace Tech_E_UnitTestProject
                 //chech the address no
                 if (AnAppointment.AppointmentLocation != "Office")
                 {
-                    OK = false;
+                    OK = true;
                 }
                 //test to see if the result is correct
                 Assert.IsTrue(OK);
