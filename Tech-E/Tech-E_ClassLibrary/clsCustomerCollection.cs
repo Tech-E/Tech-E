@@ -18,6 +18,16 @@ namespace Tech_E_ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
             DB.Execute("sproc_tblCustomer_SelectAll");
+            //get the count of records
+            RecordCount = DB.Count;
+            //while there are records to proccess
+            while (Index < RecordCount)
+            {
+                //create a blank customer
+                clsCustomer ACustomer = new clsCustomer();
+                //read in the fields from the current record
+                ACustomer.CustomerNo = Convert.ToInt32(DB.DataTable.Rows[Index]["CustomerNo"]);
+            }
             
         }
 
