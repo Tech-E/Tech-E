@@ -9,38 +9,15 @@ namespace Tech_E_ClassLibrary
     {
 
         public clsCustomerCollection()
-            {
-            
-            //create the item of test data
-            clsCustomer TestItem = new clsCustomer();
-            //set its properties
-            TestItem.CustomerNo = 1;
-            TestItem.FirstName = "Peter";
-            TestItem.LastName = "Anderson";
-            TestItem.AddressLine1 = "Test Street";
-            TestItem.AddressLine2 = "Test";
-            TestItem.Town = "Test";
-            TestItem.PostCode = "LE3 0QT";
-            TestItem.EmailAddress = "test@email.com";
-            TestItem.UserName = "test123";
-            TestItem.Password = "password";
-            //add the item to the test list
-            customerList.Add(TestItem);
-            //re initialise the object for some new data
-            TestItem = new clsCustomer();
-            //set the properties
-            TestItem.CustomerNo = 2;
-            TestItem.FirstName = "Grizz";
-            TestItem.LastName = "Tempz";
-            TestItem.AddressLine1 = "Test Street";
-            TestItem.AddressLine2 = "Test";
-            TestItem.Town = "Test";
-            TestItem.PostCode = "LE3 0QT";
-            TestItem.EmailAddress = "Baa@Grizz.com";
-            TestItem.UserName = "Propa123";
-            TestItem.Password = "password";
-            //add the item to the test list
-            CustomerList.Add(TestItem);
+        {
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount = 0;
+            //object for the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomer_SelectAll")
             
         }
 
