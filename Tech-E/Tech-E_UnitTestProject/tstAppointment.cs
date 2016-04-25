@@ -8,61 +8,73 @@ namespace Tech_E_UnitTestProject
     public class tstAppointment
     {
         // Start Lead Programmer nas 09/02/2016
-      
+
         [TestMethod]
-        public void CustomerNo()
+        public void InstanceOK()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsAppointments TestAppointments = new clsAppointments();
+            //test to see that it exits
+            Assert.IsNotNull(TestAppointments);
+        }
+
+        [TestMethod]
+        public void AppointmentID()
+        {
+            //create an instance of the class we want to create
+            clsAppointments AnAppointment = new clsAppointments();
             //Create some test data to assign to the property
             int Number = 1;
             //assign the data to the property
-            ACustomer.CustomerNo = Number;
+            AnAppointment.AppointmentID = Number;
             //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.CustomerNo, Number);
-
+            Assert.AreEqual(AnAppointment.AppointmentID, Number);
         }
 
         [TestMethod]
-        public void FirstName()
+        public void AppointmentLocation()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsAppointments AnAppointment = new clsAppointments();
             //Create some test data to assign to the property
-            string AFirstName = "Peter";
+            string AnAppointmentLocation = "Office";
             //assign the data to the property
-            ACustomer.FirstName = AFirstName;
+            AnAppointment.AppointmentLocation = AnAppointmentLocation;
             //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.FirstName, AFirstName);
+            Assert.AreEqual(AnAppointment.AppointmentLocation, AnAppointmentLocation);
 
+        }
+              
+        [TestMethod]
+        public void AppointmentDate()
+        {
+            //create an instance of the paymentmethod
+            clsAppointments AnAppointment = new clsAppointments();
+            //create some test data to assign to the property 
+            DateTime TestData = DateTime.Now.Date;
+            //assign the data to the property
+            AnAppointment.AppointmentDate = TestData;
+            Assert.AreEqual(AnAppointment.AppointmentDate, TestData);
         }
 
         [TestMethod]
-        public void LastName()
+        public void AppointmentTime()
         {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //Create some test data to assign to the property
-            string ALastName = "Peter";
+            //create an instance of the paymentmethod
+            clsAppointments AnAppointment = new clsAppointments();
+            //create some test data to assign to the property 
+            DateTime TestData = DateTime.Now.Date;
             //assign the data to the property
-            ACustomer.LastName = ALastName;
-            //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.LastName, ALastName);
-
+            AnAppointment.AppointmentTime = TestData;
+            Assert.AreEqual(AnAppointment.AppointmentTime, TestData);
         }
+
         // Finish Lead Programmer 09/02/2016
         [TestClass]
         public class tstAppointments
         {
 
-            [TestMethod]
-            public void InstanceOK()
-            {
-                //create an instance of the class we want to create
-                clsAppointments TestAppointments = new clsAppointments();
-                //test to see that it exits
-                Assert.IsNotNull(TestAppointments);
-            }
+            
             [TestMethod]
             public void ActivePropertyOK()
             {
@@ -86,20 +98,20 @@ namespace Tech_E_UnitTestProject
             }
 
             [TestMethod]
-            public void DateAddedPropertyOK()
+            public void AppointmentDatePropertyOK()
             {
                 //create and instance of the class we want to create
                 clsAppointments AnAppointment = new clsAppointments();
                 //create some teest data to assign to the property
                 DateTime TestData = DateTime.Now.Date;
                 //Assign the Data to the property
-                AnAppointment.Dateadded = TestData;
+                AnAppointment.AppointmentDate = TestData;
                 //test to see that the two values are the same
-                Assert.AreEqual(AnAppointment.Dateadded, TestData);
+                Assert.AreEqual(AnAppointment.AppointmentDate, TestData);
 
             }
             [TestMethod]
-            public void AppointmentNoPropertyOK()
+            public void AppointmentIDPropertyOK()
             {
                 clsAppointments AnAppointment = new clsAppointments();
                 Int32 TestData = 1;
@@ -206,6 +218,77 @@ namespace Tech_E_UnitTestProject
                 Assert.IsTrue(OK);
             }
 
+            //APPOINTMENTDATE
+            
+
+            [TestMethod]
+            public void AppointmentDateMinBoundary()
+            {
+                //create an instance of the paymentmethod
+                clsAppointments AnAppointment = new clsAppointments();
+                //boolean variable to store the result of the validation
+                Boolean OK = false;
+                //create some test data to pass to the method
+                string AppointmentLocation = "Loughborough";
+                //create a variable to store the test date data
+                DateTime TestDate;
+                //set todays date
+                TestDate = DateTime.Now.Date;
+                //convert the date to a string variable
+                string AppointmentDate = TestDate.ToString();
+                //invoke the method
+                OK = AnAppointment.Valid(AppointmentLocation, AppointmentDate);
+                //test to see that result is correct
+                Assert.IsTrue(OK);
+            }
+
+            [TestMethod]
+            public void AppointmentDateMinPlusOne()
+            {
+                //create an instance of the paymentmethod
+                clsAppointments AnAppointment = new clsAppointments();
+                //boolean variable to store the result of the validation
+                Boolean OK = false;
+                //create some test data to pass to the method
+                string AppointmentLocation = "Loughborough";
+                //create a variable to store the test date data
+                DateTime TestDate;
+                //set todays date
+                TestDate = DateTime.Now.Date;
+                //change the date to whatever the date is less 100 years
+                TestDate = TestDate.AddDays(1);
+                //convert the date to a string variable
+                string AppointmentDate = TestDate.ToString();
+                //invoke the method
+                OK = AnAppointment.Valid(AppointmentLocation, AppointmentDate);
+                //test to see that result is correct
+                Assert.IsTrue(OK);
+            }
+
+            [TestMethod]
+            public void AppointmentDateMax()
+            {
+                //create an instance of the paymentmethod
+                clsAppointments AnAppointment = new clsAppointments();
+                //boolean variable to store the result of the validation
+                Boolean OK = false;
+                //create some test data to pass to the method
+                string AppointmentLocation = "Loughborough";
+                //create a variable to store the test date data
+                DateTime TestDate;
+                //set todays date
+                TestDate = DateTime.Now.Date;
+                //change the date to whatever the date is less 100 years
+                TestDate = TestDate.AddYears(100);
+                //convert the date to a string variable
+                string AppointmentDate = TestDate.ToString();
+                //invoke the method
+                OK = AnAppointment.Valid(AppointmentLocation, AppointmentDate);
+                //test to see that result is correct
+                Assert.IsTrue(OK);
+            }
+
+
             [TestMethod]
             public void AppointmentLocationInvalidDataType()
             {
@@ -217,12 +300,17 @@ namespace Tech_E_UnitTestProject
             [TestMethod]
             public void FindMethodOK()
             {
+                //create an instance of the paymentmethod
                 clsAppointments AnAppointment = new clsAppointments();
+                //boolean variable to store the result of the validation
                 Boolean Found = false;
+                //create some test data to use with the method
                 Int32 AppointmentID = 2;
+                //invoke the method
                 Found = AnAppointment.Find(AppointmentID);
+                //test to see that the result is correct
                 Assert.IsTrue(Found);
-            }
+            }                        
 
             [TestMethod]
             public void TestAppointmentIDFound()
@@ -230,25 +318,16 @@ namespace Tech_E_UnitTestProject
                 clsAppointments AnAppointment = new clsAppointments();
                 Boolean Found = false;
                 Boolean OK = true;
-                Int32 AppointmentID = 21;
+                Int32 AppointmentID = 2;
                 Found = AnAppointment.Find(AppointmentID);
-                if (AnAppointment.AppointmentID != 21)
+                if (AnAppointment.AppointmentID != 2)
                 {
                     OK = false;
                 }
                 Assert.IsTrue(OK);
             }
-            [TestMethod]
-            public void AppointmentDate()
-            {
-                //create an instance of the paymentmethod
-                clsAppointments Apayment = new clsAppointments();
-                //create some test data to assign to the property 
-                DateTime TestData = DateTime.Now.Date;
-                //assign the data to the property
-                Apayment.Dateadded = TestData;
-                Assert.AreEqual(Apayment.Dateadded, TestData);
-            }
+
+
             [TestMethod]
             public void AppointmentLocationFound()
             {
@@ -259,14 +338,48 @@ namespace Tech_E_UnitTestProject
                 //boolean variable to record if data is OK (assume it is)
                 Boolean OK = true;
                 //create some test data to use with the method
-                Int32 AppointmentID = 21;
+                Int32 AppointmentID = 1;
                 //invoke the mothod
                 Found = AnAppointment.Find(AppointmentID);
                 //chech the address no
-                if (AnAppointment.Location != "Leicester")
+                if (AnAppointment.AppointmentLocation != "Office")
                 {
                     OK = false;
                 }
+                //test to see if the result is correct
+                Assert.IsTrue(OK);
+            }
+
+            [TestMethod]
+            public void AppointmentDate()
+            {
+                //create an instance of the paymentmethod
+                clsAppointments Apayment = new clsAppointments();
+                //create some test data to assign to the property 
+                DateTime TestData = DateTime.Now.Date;
+                //assign the data to the property
+                Apayment.AppointmentDate = TestData;
+                Assert.AreEqual(Apayment.AppointmentDate, TestData);
+            }
+            
+
+            [TestMethod]
+            public void AppointmentValidMethodOK()
+            {
+                //create an instance of the class we want to create
+                clsAppointments AnAppointment = new clsAppointments();
+                //Boolean variable to store the result of the validation
+                Boolean OK = false;
+                //create some test data to use with the method
+                String AppointmentLocation = "Office";
+                //create a variable to store the test date data
+                DateTime TestDate;
+                //set todays date
+                TestDate = DateTime.Now.Date;
+                //convert the date to a string variable
+                string AppointmentDate = TestDate.ToString();
+                //invoke the method
+                OK = AnAppointment.Valid(AppointmentLocation, AppointmentDate);
                 //test to see if the result is correct
                 Assert.IsTrue(OK);
             }

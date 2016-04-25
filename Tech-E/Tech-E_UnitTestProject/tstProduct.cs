@@ -43,7 +43,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create some test data to assign to the property
-            string AProductName = "Monitor";
+            string AProductName = "AJazz Keyboard";
             //assign the data to the property
             AProduct.ProductName = AProductName;
             //test to see that the two values are the same
@@ -56,7 +56,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create some test data to assign to the property
-            string AProductType = "Mouse";
+            string AProductType = "Keyboard";
             //assign the data to the property
             AProduct.ProductType = AProductType;
             //test to see that the two values are the same
@@ -69,7 +69,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create test data 
-            string AProductDescription = "24 Inch Monitor...";
+            string AProductDescription = "Mechanical Keyboard";
             //assign the data to the property
             AProduct.ProductDescription = AProductDescription;
             //two values are the same
@@ -82,7 +82,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create test data 
-            decimal AProductPrice = 109;
+            decimal AProductPrice = 6;
             //assign the data to the property
             AProduct.ProductPrice = AProductPrice;
             //two values are the same
@@ -95,7 +95,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create test data 
-            string AProductManufacturer = "Dell";
+            string AProductManufacturer = "AJazz";
             //assign the data to the property
             AProduct.ProductManufacturer = AProductManufacturer;
             //two values are the same
@@ -109,7 +109,7 @@ namespace Tech_E_UnitTestProject
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //Create test data 
-            int AStock = 1;
+            int AStock = 8;
             //assign the data to the property
             AProduct.ProductsInStock = AStock;
             //two values are the same

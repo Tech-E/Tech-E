@@ -199,7 +199,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 PaymentNo = 222;
+            Int32 PaymentNo = 2;
             //invoke the method
             Found = Apayment.Find(PaymentNo);
             //test to see that the result is correct
@@ -511,7 +511,7 @@ namespace Tech_E_UnitTestProject
             string Amount = "69.99";
             string PaymentMethod = "Debit Card";
             //set data added to a non value
-            string DateAdded = "";
+            string DateAdded = "19/07/4000";
             //invoke the method
             OK = Apayment.Valid(PaymentNo, Amount, PaymentMethod, DateAdded);
             //test to see that result is correct
