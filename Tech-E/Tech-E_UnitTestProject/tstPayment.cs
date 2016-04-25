@@ -199,7 +199,7 @@ namespace Tech_E_UnitTestProject
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 PaymentNo = 222;
+            Int32 PaymentNo = 2;
             //invoke the method
             Found = Apayment.Find(PaymentNo);
             //test to see that the result is correct
