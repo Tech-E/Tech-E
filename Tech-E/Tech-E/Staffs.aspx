@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="formcon" runat="server">
     <div>
     
         <asp:ListBox ID="ListBox1" runat="server" Height="264px" Width="414px"></asp:ListBox>
@@ -16,18 +16,18 @@
     <p>
         please Enter StaffID<br />
 
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txt1" runat="server"></asp:TextBox>
 
     </p>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Apply" Width="171px" />
-&nbsp;<asp:Button ID="Button2" runat="server" Text="Display All" Width="171px" />
+            <asp:Button ID="btn1" runat="server" Text="Apply" Width="171px" OnClick="Button1_Click" />
+&nbsp;<asp:Button ID="btn2" runat="server" Text="Display All" Width="171px" OnClick="Button2_Click" />
 
     </p>
         <p>
-            <asp:Button ID="Button3" runat="server" Text="Add" />
-&nbsp;<asp:Button ID="Button4" runat="server" Text="Edit" />
-&nbsp;<asp:Button ID="Button5" runat="server" Text="Delete" />
+            <asp:Button ID="btn3" runat="server" Text="Add" OnClick="Button3_Click" />
+&nbsp;<asp:Button ID="btn4" runat="server" Text="Edit" OnClick="Button4_Click" />
+&nbsp;<asp:Button ID="btn5" runat="server" Text="Delete" OnClick="Button5_Click" />
 
     </p>
     </form>
