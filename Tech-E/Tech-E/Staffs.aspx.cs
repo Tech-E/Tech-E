@@ -31,9 +31,30 @@ namespace Tech_E
             ListBox1.DataBind();
         }
 
+        //add method
         protected void btn3_Click(object sender, EventArgs e)
         {
             Response.Redirect("StaffsAdd.aspx");
+        }
+
+        //delete
+        protected void btn5_Click(object sender, EventArgs e)
+        {
+            int staffid;
+            if (ListBox1.SelectedIndex!=-1)
+            {
+                //get the primary key 
+                staffid = Convert.ToInt32(ListBox1.SelectedValue);
+                Session["staffid"] = staffid;
+                //redirext to the delete page
+                Response.Redirect("StaffDeletePage.aspx");
+
+            }
+            else
+            {
+                //displayan error
+                Response.Write("<script type='text/javascript'>alert('Please select a recordtp delete from the list');</script>");
+            }
         }
 
        
